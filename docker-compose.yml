@@ -19,6 +19,8 @@ services:
       redis:
         condition: service_started
     restart: unless-stopped
+    volumes:
+      - ./public/uploads:/app/public/uploads
     networks:
       - vidlecta-network
 
