@@ -14,6 +14,7 @@ import {
     Bell,
     Search,
     Menu,
+    MessageSquare,
     X,
     ChevronDown,
     CheckSquare,
@@ -32,6 +33,7 @@ const navigation = [
     { name: 'Отзывы', href: '/admin/reviews', icon: Star },
     { name: 'Финансы', href: '/admin/finance', icon: DollarSign },
     { name: 'Контент', href: '/admin/content', icon: FileText },
+    { name: 'Поддержка', href: '/admin/support', icon: MessageSquare },
     { name: 'Настройки', href: '/admin/settings', icon: Settings },
 ];
 
