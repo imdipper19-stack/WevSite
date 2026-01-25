@@ -39,14 +39,17 @@ export async function GET(request: NextRequest) {
 
         const result = await handleTelegramAuth(authData);
 
+        const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://vidlecta.com';
+
         if (result.status === 200) {
-            return NextResponse.redirect(new URL('/dashboard', request.url));
+            return NextResponse.redirect(`${baseUrl}/dashboard`);
         } else {
-            return NextResponse.redirect(new URL('/login?error=telegram_auth_failed', request.url));
+            return NextResponse.redirect(`${baseUrl}/login?error=telegram_auth_failed`);
         }
     } catch (error) {
         console.error('Telegram redirect error:', error);
-        return NextResponse.redirect(new URL('/login?error=server_error', request.url));
+        const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://vidlecta.com';
+        return NextResponse.redirect(`${baseUrl}/login?error=server_error`);
     }
 }
 
