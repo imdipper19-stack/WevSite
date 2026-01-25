@@ -25,9 +25,9 @@ export default function AdminContentPage() {
         // Placeholder for future modules
         {
             title: 'SEO Настройки',
-            description: 'Мета-теги и настройки страниц (Скоро)',
+            description: 'Мета-теги и настройки страниц',
             icon: FileText,
-            href: '#',
+            href: '/admin/seo',
             color: 'text-purple-500',
             bgColor: 'bg-purple-500/10'
         }
