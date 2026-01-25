@@ -46,7 +46,9 @@ const statusLabels: Record<string, string> = {
     CANCELLED: 'Отменён',
 };
 
-export default function ChatPage() {
+import { Suspense } from 'react';
+
+function ChatContent() {
     const searchParams = useSearchParams();
     const orderId = searchParams.get('order');
 
@@ -342,5 +344,13 @@ export default function ChatPage() {
                 </div>
             </div>
         </div>
+    );
+}
+
+export default function ChatPage() {
+    return (
+        <Suspense fallback={<div className="flex items-center justify-center min-h-[400px]"><Loader2 className="w-8 h-8 animate-spin text-[var(--primary)]" /></div>}>
+            <ChatContent />
+        </Suspense>
     );
 }
