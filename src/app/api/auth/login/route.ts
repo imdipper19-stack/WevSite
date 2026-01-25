@@ -67,6 +67,10 @@ export async function POST(request: NextRequest) {
 
     } catch (error) {
         console.error('Login error:', error);
+        // Debugging DB connection
+        const dbUrl = process.env.DATABASE_URL || 'undefined';
+        console.error('DEBUG: Current DATABASE_URL starts with:', dbUrl.split('@')[1] || dbUrl.substring(0, 15));
+
         return NextResponse.json(
             { error: 'Внутренняя ошибка сервера' },
             { status: 500 }
