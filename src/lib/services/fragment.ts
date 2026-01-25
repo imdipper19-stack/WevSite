@@ -44,6 +44,58 @@ const decodePayload = (payload: string): string => {
     }
 };
 
+// Exported verification function
+export async function verifyTonTransaction(
+    walletAddress: string,
+    amount: number,
+    comment: string
+): Promise<boolean> {
+    try {
+        // Use TONAPI to check for recent transactions
+        // For now, we'll verify against the public API
+        const tonApiKey = "AGAI6AUZN5C7RPQAAAAOSX3E3HQ4ZAJV635FYAV4KBS4QDWZCBXWX6D4RDGY52QPXHLGWZQ"; // TODO: Move to env
+
+        const res = await fetch(`https://tonapi.io/v2/blockchain/accounts/${walletAddress}/transactions?limit=20`, {
+            headers: { 'Authorization': `Bearer ${tonApiKey}` }
+        });
+
+        if (!res.ok) return false;
+
+        const data = await res.json();
+        const transactions = data.transactions || [];
+
+        // Look for incoming transaction with matching comment and amount
+        // Note: Amount in TONAPI is in nanoton
+        const expectedNano = BigInt(Math.round(amount * 1e9));
+
+        for (const tx of transactions) {
+            if (tx.in_msg && tx.in_msg.value) {
+                // Check comment
+                let msgComment = '';
+                if (tx.in_msg.decoded_body && tx.in_msg.decoded_body.text) {
+                    msgComment = tx.in_msg.decoded_body.text;
+                }
+
+                // Compare (allow small dust difference?) No, exact match for now.
+                // Also check timestamp (should be recent, e.g. < 15 mins)
+                const txTime = tx.utime;
+                const now = Math.floor(Date.now() / 1000);
+
+                if (now - txTime > 900) continue; // Too old
+
+                if (msgComment === comment && BigInt(tx.in_msg.value) >= expectedNano) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    } catch (e) {
+        console.error('Verify TON error:', e);
+        return false;
+    }
+}
+
 export class FragmentService {
 
     // 1. Search Recipient

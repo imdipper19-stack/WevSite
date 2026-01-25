@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { getCurrentUser } from '@/lib/auth';
 import { OrderStatus } from '@prisma/client';
-import { verifyTonTransaction } from '@/lib/fragment-api';
+import { verifyTonTransaction } from '@/lib/services/fragment';
 
 export const dynamic = 'force-dynamic';
 
