@@ -1,0 +1,636 @@
+[2026-01-24T18:05:57.617Z] Triggering Auto-Buy for VID-MKSMEVOT-6039BA
+[2026-01-24T18:05:57.619Z] Starting delivery: 50 stars to BAG1BAG1 (Order d9a59345-c784-4c2c-8eda-b779be1e1981)
+[2026-01-24T18:07:04.921Z] Triggering Auto-Buy for VID-MKSMGC5J-FC9FF9
+[2026-01-24T18:07:04.922Z] Starting delivery: 50 stars to BAG1BAG1 (Order c48bc3e3-3350-4ce5-a83c-2f477c094b39)
+[2026-01-24T18:07:04.927Z] Settings loaded. Hash present: true
+[2026-01-24T18:07:04.927Z] Searching recipient...
+[2026-01-24T18:07:05.232Z] Search fetch status: 200
+[2026-01-24T18:07:05.233Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T18:07:05.233Z] Init buy request...
+[2026-01-24T18:07:05.340Z] Init failed
+[2026-01-24T18:08:12.575Z] Triggering Auto-Buy for VID-MKSMHRX8-AE7F58
+[2026-01-24T18:08:12.576Z] Starting delivery: 50 stars to BAG1BAG1 (Order 6cd76239-1709-4e1a-ae0e-91f4645fc327)
+[2026-01-24T18:08:12.583Z] Settings loaded. Hash present: true
+[2026-01-24T18:08:12.583Z] Searching recipient...
+[2026-01-24T18:08:12.806Z] Search fetch status: 200
+[2026-01-24T18:08:12.807Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T18:08:12.807Z] Init buy request...
+[2026-01-24T18:08:12.910Z] Init response: {"req_id":"_5iFaBeaVeOd3e9-oGzCC3-n","myself":true,"to_bot":false,"amount":"0.4881","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4881</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T18:08:12.911Z] Init failed
+[2026-01-24T18:09:13.070Z] Triggering Auto-Buy for VID-MKSMJ2UT-0F1646
+[2026-01-24T18:09:13.072Z] Starting delivery: 50 stars to BAG1BAG1 (Order 4fd59110-ab33-443f-a49f-2caa0b465ca1)
+[2026-01-24T18:09:13.078Z] Settings loaded. Hash present: true
+[2026-01-24T18:09:13.079Z] Searching recipient...
+[2026-01-24T18:09:13.322Z] Search fetch status: 200
+[2026-01-24T18:09:13.324Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T18:09:13.324Z] Init buy request...
+[2026-01-24T18:09:13.428Z] Init response: {"req_id":"BGnM-xH8iZLwqWK59fLT57LF","myself":true,"to_bot":false,"amount":"0.4876","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4876</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T18:09:13.429Z] Init success. ReqID: BGnM-xH8iZLwqWK59fLT57LF, Amount: 0.4876
+[2026-01-24T18:09:13.874Z] Stars Delivery Error: Request failed with status code 401
+Error: Request failed with status code 401
+    at createError (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__d11d1135._.js:8343:17)
+    at settle (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__d11d1135._.js:8362:16)
+    at IncomingMessage.handleStreamEnd (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__d11d1135._.js:8681:21)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+[2026-01-24T18:10:22.661Z] Triggering Auto-Buy for VID-MKSMKKRZ-DF0956
+[2026-01-24T18:10:22.663Z] Starting delivery: 50 stars to BAG1BAG1 (Order 9dc324b5-e679-44e8-91d5-82ce8606940c)
+[2026-01-24T18:10:22.670Z] Settings loaded. Hash present: true
+[2026-01-24T18:10:22.670Z] Searching recipient...
+[2026-01-24T18:10:22.839Z] Search fetch status: 200
+[2026-01-24T18:10:22.840Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T18:10:22.841Z] Init buy request...
+[2026-01-24T18:10:22.939Z] Init response: {"req_id":"gclBxEXo1No51uD6BV0_IZq1","myself":true,"to_bot":false,"amount":"0.4876","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4876</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T18:10:22.940Z] Init success. ReqID: gclBxEXo1No51uD6BV0_IZq1, Amount: 0.4876
+[2026-01-24T18:10:23.323Z] Stars Delivery Error: Request failed with status code 401
+Error: Request failed with status code 401
+    at createError (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__d11d1135._.js:8343:17)
+    at settle (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__d11d1135._.js:8362:16)
+    at IncomingMessage.handleStreamEnd (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__d11d1135._.js:8681:21)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+[2026-01-24T18:11:49.376Z] Triggering Auto-Buy for VID-MKSMMEKU-CEA973
+[2026-01-24T18:11:49.378Z] Starting delivery: 50 stars to BAG1BAG1 (Order 19050b90-ee09-481c-b109-e00a608e5fb4)
+[2026-01-24T18:11:49.385Z] Settings loaded. Hash present: true
+[2026-01-24T18:11:49.385Z] Searching recipient...
+[2026-01-24T18:11:49.638Z] Search fetch status: 200
+[2026-01-24T18:11:49.640Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T18:11:49.641Z] Init buy request...
+[2026-01-24T18:11:49.738Z] Init response: {"req_id":"qEs_u7N5T06zfhn0IKSvGYIx","myself":true,"to_bot":false,"amount":"0.4877","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4877</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T18:11:49.739Z] Init success. ReqID: qEs_u7N5T06zfhn0IKSvGYIx, Amount: 0.4877
+[2026-01-24T18:11:50.164Z] Stars Delivery Error: Request failed with status code 401
+Error: Request failed with status code 401
+    at createError (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__d11d1135._.js:8343:17)
+    at settle (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__d11d1135._.js:8362:16)
+    at IncomingMessage.handleStreamEnd (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__d11d1135._.js:8681:21)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+[2026-01-24T18:13:34.831Z] Triggering Auto-Buy for VID-MKSMOO2U-7AD259
+[2026-01-24T18:13:34.832Z] Starting delivery: 50 stars to BAG1BAG1 (Order 3f9c6f86-68c2-4f79-8cee-5bd2c66194a7)
+[2026-01-24T18:13:34.838Z] Settings loaded. Hash present: true
+[2026-01-24T18:13:34.838Z] Searching recipient...
+[2026-01-24T18:13:35.165Z] Search fetch status: 200
+[2026-01-24T18:13:35.167Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T18:13:35.167Z] Init buy request...
+[2026-01-24T18:13:35.287Z] Init response: {"req_id":"wza1sSFN78ddmYHtIb-lqIeG","myself":true,"to_bot":false,"amount":"0.4877","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4877</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T18:13:35.288Z] Init success. ReqID: wza1sSFN78ddmYHtIb-lqIeG, Amount: 0.4877
+[2026-01-24T18:13:35.404Z] Created TonClient (Public Mode)
+[2026-01-24T18:13:35.900Z] Stars Delivery Error: Request failed with status code 429
+Error: Request failed with status code 429
+    at createError (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__d11d1135._.js:8343:17)
+    at settle (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__d11d1135._.js:8362:16)
+    at IncomingMessage.handleStreamEnd (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__d11d1135._.js:8681:21)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+[2026-01-24T18:25:11.140Z] Triggering Auto-Buy for VID-MKSN3L07-6BBBDF
+[2026-01-24T18:25:11.141Z] Starting delivery: 50 stars to BAG1BAG1 (Order 5d953cb0-2848-493a-814c-92de382bc9c6)
+[2026-01-24T18:25:11.146Z] Settings loaded. Hash present: true
+[2026-01-24T18:25:11.146Z] Searching recipient...
+[2026-01-24T18:25:11.328Z] Search fetch status: 200
+[2026-01-24T18:25:11.331Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T18:25:11.332Z] Init buy request...
+[2026-01-24T18:25:11.421Z] Init response: {"req_id":"6c5qY7DKT0bVf0bUkz0-ky3N","myself":true,"to_bot":false,"amount":"0.4871","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4871</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T18:25:11.421Z] Init success. ReqID: 6c5qY7DKT0bVf0bUkz0-ky3N, Amount: 0.4871
+[2026-01-24T18:25:11.514Z] Prepared Transaction: Amount=0.4871 TON, Comment=50 Telegram Stars 
+
+Ref#Y2RfDUhjB
+[2026-01-24T18:25:11.514Z] Created TonClient (User Key)
+[2026-01-24T18:25:11.848Z] Stars Delivery Error: Request failed with status code 401
+Error: Request failed with status code 401
+    at createError (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__d11d1135._.js:8343:17)
+    at settle (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__d11d1135._.js:8362:16)
+    at IncomingMessage.handleStreamEnd (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__d11d1135._.js:8681:21)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+[2026-01-24T18:35:01.553Z] Triggering Auto-Buy for VID-MKSNG7KY-E96F35
+[2026-01-24T18:35:01.554Z] Starting delivery: 50 stars to BAG1BAG1 (Order e10b0faf-c9ef-4afc-8702-a7c16583fd01)
+[2026-01-24T18:35:01.559Z] Settings loaded. Hash present: true
+[2026-01-24T18:35:01.560Z] Searching recipient...
+[2026-01-24T18:35:01.739Z] Search fetch status: 200
+[2026-01-24T18:35:01.743Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T18:35:01.743Z] Init buy request...
+[2026-01-24T18:35:01.827Z] Init response: {"req_id":"E1wmZ4-3PBFT0Kze60fg__V2","myself":true,"to_bot":false,"amount":"0.4878","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4878</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T18:35:01.827Z] Init success. ReqID: E1wmZ4-3PBFT0Kze60fg__V2, Amount: 0.4878
+[2026-01-24T18:35:01.918Z] Prepared Transaction: Amount=0.4878 TON, Comment=50 Telegram Stars 
+
+Ref#z45yQiGEX
+[2026-01-24T18:35:02.253Z] Wallet Info: Seqno=0, Balance=12623642395
+[2026-01-24T18:35:02.267Z] BOC created. Size: 252
+[2026-01-24T18:35:02.368Z] Broadcast failed: 406 {"error":"cannot apply external message to current state"}
+[2026-01-24T18:35:49.820Z] Triggering Auto-Buy for VID-MKSNH9XY-106512
+[2026-01-24T18:35:49.821Z] Starting delivery: 50 stars to BAG1BAG1 (Order 583043a4-d55e-4de7-8eb7-644e30008d5d)
+[2026-01-24T18:35:49.827Z] Settings loaded. Hash present: true
+[2026-01-24T18:35:49.827Z] Searching recipient...
+[2026-01-24T18:35:49.997Z] Search fetch status: 200
+[2026-01-24T18:35:49.998Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T18:35:49.998Z] Init buy request...
+[2026-01-24T18:35:50.077Z] Init response: {"req_id":"M6I_8bBgjl_9vK40xpIeBBEy","myself":true,"to_bot":false,"amount":"0.4878","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4878</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T18:35:50.077Z] Init success. ReqID: M6I_8bBgjl_9vK40xpIeBBEy, Amount: 0.4878
+[2026-01-24T18:35:50.169Z] Prepared Transaction: Amount=0.4878 TON, Comment=50 Telegram Stars 
+
+Ref#9ml8fqIl7
+[2026-01-24T18:35:50.584Z] Wallet Info: Seqno=0, Balance=12623642395
+[2026-01-24T18:35:50.595Z] BOC created. Size: 252
+[2026-01-24T18:35:50.691Z] Broadcast failed: 406 {"error":"cannot apply external message to current state"}
+[2026-01-24T18:38:16.712Z] Triggering Auto-Buy for VID-MKSNKFGW-7F1EBA
+[2026-01-24T18:38:16.714Z] Starting delivery: 50 stars to BAG1BAG1 (Order 44624264-3746-4370-85c9-94d239934163)
+[2026-01-24T18:38:16.719Z] Settings loaded. Hash present: true
+[2026-01-24T18:38:16.719Z] Searching recipient...
+[2026-01-24T18:38:16.883Z] Search fetch status: 200
+[2026-01-24T18:38:16.885Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T18:38:16.885Z] Init buy request...
+[2026-01-24T18:38:16.996Z] Init response: {"req_id":"QpBJlG1FpsyJi0ODqpykinD5","myself":true,"to_bot":false,"amount":"0.4876","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4876</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T18:38:16.996Z] Init success. ReqID: QpBJlG1FpsyJi0ODqpykinD5, Amount: 0.4876
+[2026-01-24T18:38:17.090Z] Prepared Transaction: Amount=0.4876 TON, Comment=50 Telegram Stars 
+
+Ref#e8UNudxnA
+[2026-01-24T18:38:17.433Z] Wallet Info: Seqno=0, Balance=12623642395
+[2026-01-24T18:38:17.433Z] Seqno is 0. Attaching StateInit for deployment.
+[2026-01-24T18:38:17.462Z] Stars Delivery Error: wallet.createRequest is not a function
+TypeError: wallet.createRequest is not a function
+    at FragmentService.deliverStars (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__9d789be0._.js:573:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__9d789be0._.js:781:36
+[2026-01-24T18:42:25.012Z] Triggering Auto-Buy for VID-MKSNO42A-EACA97
+[2026-01-24T18:42:25.026Z] Starting delivery: 50 stars to BAG1BAG1 (Order a3845234-78fc-4419-80f9-78ce6723c8e7)
+[2026-01-24T18:42:25.031Z] Settings loaded. Hash present: true
+[2026-01-24T18:42:25.032Z] Searching recipient...
+[2026-01-24T18:42:25.298Z] Search fetch status: 200
+[2026-01-24T18:42:25.301Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T18:42:25.302Z] Init buy request...
+[2026-01-24T18:42:25.496Z] Init response: {"req_id":"eT5WMFO0Eyt342tzZcrfgQmW","myself":true,"to_bot":false,"amount":"0.4868","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4868</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T18:42:25.496Z] Init success. ReqID: eT5WMFO0Eyt342tzZcrfgQmW, Amount: 0.4868
+[2026-01-24T18:42:25.627Z] Prepared Transaction: Amount=0.4868 TON, Comment=50 Telegram Stars 
+
+Ref#TbEqGKlrx
+[2026-01-24T18:42:25.936Z] Wallet Info: Seqno=0, Balance=12623642395
+[2026-01-24T18:42:25.937Z] Seqno is 0. Attaching StateInit for deployment.
+[2026-01-24T18:42:25.973Z] Stars Delivery Error: Invalid address: 0
+Error: Invalid address: 0
+    at BitReader.loadAddress (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\node_modules_ton-core_dist_e155ab1d._.js:2774:19)
+    at Slice.loadAddress (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\node_modules_ton-core_dist_e155ab1d._.js:2358:29)
+    at loadCommonMessageInfo (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\node_modules_ton-core_dist_e155ab1d._.js:6053:27)
+    at loadMessage (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\node_modules_ton-core_dist_e155ab1d._.js:6292:64)
+    at FragmentService.deliverStars (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__a06f8874._.js:560:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__a06f8874._.js:763:36
+[2026-01-24T18:46:13.359Z] Triggering Auto-Buy for VID-MKSNUNAP-2BBDB4
+[2026-01-24T18:46:13.378Z] Starting delivery: 50 stars to BAG1BAG1 (Order 97e9e7ed-2cb8-4c0c-ab81-ec61a063b4cd)
+[2026-01-24T18:46:13.392Z] Settings loaded. Hash present: true
+[2026-01-24T18:46:13.393Z] Searching recipient...
+[2026-01-24T18:46:13.670Z] Search fetch status: 200
+[2026-01-24T18:46:13.672Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T18:46:13.672Z] Init buy request...
+[2026-01-24T18:46:13.794Z] Init response: {"req_id":"lM5dP6r3tpCgHXtvO2cRllaU","myself":true,"to_bot":false,"amount":"0.4869","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4869</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T18:46:13.795Z] Init success. ReqID: lM5dP6r3tpCgHXtvO2cRllaU, Amount: 0.4869
+[2026-01-24T18:46:13.921Z] Prepared Transaction: Amount=0.4869 TON, Comment=50 Telegram Stars 
+
+Ref#r8djDCh7r
+[2026-01-24T18:46:13.936Z] Stars Delivery Error: transferCell is not defined
+ReferenceError: transferCell is not defined
+    at FragmentService.deliverStars (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__a06f8874._.js:472:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__a06f8874._.js:611:36
+[2026-01-24T18:48:01.068Z] Triggering Auto-Buy for VID-MKSNWYAG-EA0214
+[2026-01-24T18:48:01.081Z] Starting delivery: 50 stars to BAG1BAG1 (Order aa79092a-4ecf-4f25-a882-0f23a2a2e10f)
+[2026-01-24T18:48:01.088Z] Settings loaded. Hash present: true
+[2026-01-24T18:48:01.088Z] Searching recipient...
+[2026-01-24T18:48:01.265Z] Search fetch status: 200
+[2026-01-24T18:48:01.267Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T18:48:01.267Z] Init buy request...
+[2026-01-24T18:48:01.353Z] Init response: {"req_id":"5g1yQclafjqXBP9qLbCqNqCH","myself":true,"to_bot":false,"amount":"0.4869","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4869</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T18:48:01.354Z] Init success. ReqID: 5g1yQclafjqXBP9qLbCqNqCH, Amount: 0.4869
+[2026-01-24T18:48:01.445Z] Prepared Transaction: Amount=0.4869 TON, Comment=50 Telegram Stars 
+
+Ref#jfq1qKBMW
+[2026-01-24T18:48:01.446Z] Executing Python script: C:\Users\imdip\Desktop\Vidlecta\scripts\deliver_stars.py
+[2026-01-24T18:48:21.517Z] Python Output: Collecting tonutils
+  Downloading tonutils-0.5.6-py3-none-any.whl.metadata (4.6 kB)
+Collecting aiohttp<=3.12.2,>=3.7.0 (from tonutils)
+  Downloading aiohttp-3.12.2.tar.gz (7.8 MB)
+     ---------------------------------------- 7.8/7.8 MB 13.5 MB/s  0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting aiolimiter~=1.2.1 (from tonutils)
+  Downloading aiolimiter-1.2.1-py3-none-any.whl.metadata (4.5 kB)
+Collecting cachetools~=5.5.0 (from tonutils)
+  Downloading cachetools-5.5.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting pycryptodomex~=3.20.0 (from tonutils)
+  Downloading pycryptodomex-3.20.0-cp35-abi3-win_amd64.whl.metadata (3.4 kB)
+Collecting PyNaCl~=1.5.0 (from tonutils)
+  Downloading PyNaCl-1.5.0-cp36-abi3-win_amd64.whl.metadata (8.7 kB)
+Collecting pytoniq-core>=0.1.45 (from tonutils)
+  Downloading pytoniq_core-0.1.46-py3-none-any.whl.metadata (2.1 kB)
+Requirement already satisfied: aiohappyeyeballs>=2.5.0 in c:\python314\lib\site-packages (from aiohttp<=3.12.2,>=3.7.0->tonutils) (2.6.1)
+Requirement already satisfied: aiosignal>=1.1.2 in c:\python314\lib\site-packages (from aiohttp<=3.12.2,>=3.7.0->tonutils) (1.4.0)
+Requirement already satisfied: attrs>=17.3.0 in c:\python314\lib\site-packages (from aiohttp<=3.12.2,>=3.7.0->tonutils) (25.4.0)
+Requirement already satisfied: frozenlist>=1.1.1 in c:\python314\lib\site-packages (from aiohttp<=3.12.2,>=3.7.0->tonutils) (1.8.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in c:\python314\lib\site-packages (from aiohttp<=3.12.2,>=3.7.0->tonutils) (6.7.0)
+Requirement already satisfied: propcache>=0.2.0 in c:\python314\lib\site-packages (from aiohttp<=3.12.2,>=3.7.0->tonutils) (0.4.1)
+Requirement already satisfied: yarl<2.0,>=1.17.0 in c:\python314\lib\site-packages (from aiohttp<=3.12.2,>=3.7.0->tonutils) (1.22.0)
+Collecting cffi>=1.4.1 (from PyNaCl~=1.5.0->tonutils)
+  Using cached cffi-2.0.0-cp314-cp314-win_amd64.whl.metadata (2.6 kB)
+Requirement already satisfied: idna>=2.0 in c:\python314\lib\site-packages (from yarl<2.0,>=1.17.0->aiohttp<=3.12.2,>=3.7.0->tonutils) (3.11)
+Collecting pycparser (from cffi>=1.4.1->PyNaCl~=1.5.0->tonutils)
+  Using cached pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting bitarray>=2.6.0 (from pytoniq-core>=0.1.45->tonutils)
+  Downloading bitarray-3.8.0-cp314-cp314-win_amd64.whl.metadata (35 kB)
+Requirement already satisfied: requests>=2.31.0 in c:\python314\lib\site-packages (from pytoniq-core>=0.1.45->tonutils) (2.32.5)
+Collecting x25519>=0.0.2 (from pytoniq-core>=0.1.45->tonutils)
+  Downloading x25519-0.0.2-py3-none-any.whl.metadata (2.1 kB)
+Collecting setuptools>=65.5.1 (from pytoniq-core>=0.1.45->tonutils)
+  Using cached setuptools-80.10.1-py3-none-any.whl.metadata (6.7 kB)
+Requirement already satisfied: charset_normalizer<4,>=2 in c:\python314\lib\site-packages (from requests>=2.31.0->pytoniq-core>=0.1.45->tonutils) (3.4.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\python314\lib\site-packages (from requests>=2.31.0->pytoniq-core>=0.1.45->tonutils) (2.6.3)
+Requirement already satisfied: certifi>=2017.4.17 in c:\python314\lib\site-packages (from requests>=2.31.0->pytoniq-core>=0.1.45->tonutils) (2026.1.4)
+Downloading tonutils-0.5.6-py3-none-any.whl (150 kB)
+Downloading aiolimiter-1.2.1-py3-none-any.whl (6.7 kB)
+Downloading cachetools-5.5.2-py3-none-any.whl (10 kB)
+Downloading pycryptodomex-3.20.0-cp35-abi3-win_amd64.whl (1.8 MB)
+   ---------------------------------------- 1.8/1.8 MB 66.7 MB/s  0:00:00
+Downloading PyNaCl-1.5.0-cp36-abi3-win_amd64.whl (212 kB)
+Using cached cffi-2.0.0-cp314-cp314-win_amd64.whl (185 kB)
+Downloading pytoniq_core-0.1.46-py3-none-any.whl (91 kB)
+Downloading bitarray-3.8.0-cp314-cp314-win_amd64.whl (148 kB)
+Using cached setuptools-80.10.1-py3-none-any.whl (1.1 MB)
+Downloading x25519-0.0.2-py3-none-any.whl (4.9 kB)
+Using cached pycparser-3.0-py3-none-any.whl (48 kB)
+Building wheels for collected packages: aiohttp
+  Building wheel for aiohttp (pyproject.toml): started
+  Building wheel for aiohttp (pyproject.toml): finished with status 'error'
+Failed to build aiohttp
+
+Error:   error: subprocess-exited-with-error
+  
+  Building wheel for aiohttp (pyproject.toml) did not run successfully.
+  exit code: 1
+  
+  [145 lines of output]
+  *********************
+  * Accelerated build *
+  *********************
+  running bdist_wheel
+  running build
+  running build_py
+  creating build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\abc.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\base_protocol.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\client.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\client_exceptions.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\client_middlewares.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\client_middleware_digest_auth.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\client_proto.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\client_reqrep.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\client_ws.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\compression_utils.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\connector.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\cookiejar.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\formdata.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\hdrs.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\helpers.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\http.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\http_exceptions.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\http_parser.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\http_websocket.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\http_writer.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\log.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\multipart.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\payload.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\payload_streamer.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\pytest_plugin.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\resolver.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\streams.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\tcp_helpers.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\test_utils.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\tracing.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\typedefs.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\web.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\web_app.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\web_exceptions.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\web_fileresponse.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\web_log.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\web_middlewares.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\web_protocol.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\web_request.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\web_response.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\web_routedef.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\web_runner.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\web_server.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\web_urldispatcher.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\web_ws.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\worker.py -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\__init__.py -> build\lib.win-amd64-cpython-314\aiohttp
+  creating build\lib.win-amd64-cpython-314\aiohttp\_websocket
+  copying aiohttp\_websocket\helpers.py -> build\lib.win-amd64-cpython-314\aiohttp\_websocket
+  copying aiohttp\_websocket\models.py -> build\lib.win-amd64-cpython-314\aiohttp\_websocket
+  copying aiohttp\_websocket\reader.py -> build\lib.win-amd64-cpython-314\aiohttp\_websocket
+  copying aiohttp\_websocket\reader_c.py -> build\lib.win-amd64-cpython-314\aiohttp\_websocket
+  copying aiohttp\_websocket\reader_py.py -> build\lib.win-amd64-cpython-314\aiohttp\_websocket
+  copying aiohttp\_websocket\writer.py -> build\lib.win-amd64-cpython-314\aiohttp\_websocket
+  copying aiohttp\_websocket\__init__.py -> build\lib.win-amd64-cpython-314\aiohttp\_websocket
+  running egg_info
+  writing aiohttp.egg-info\PKG-INFO
+  writing dependency_links to aiohttp.egg-info\dependency_links.txt
+  writing requirements to aiohttp.egg-info\requires.txt
+  writing top-level names to aiohttp.egg-info\top_level.txt
+  reading manifest file 'aiohttp.egg-info\SOURCES.txt'
+  reading manifest template 'MANIFEST.in'
+  warning: no files found matching 'aiohttp' anywhere in distribution
+  warning: no files found matching '*.pyi' anywhere in distribution
+  warning: no previously-included files matching '*.pyc' found anywhere in distribution
+  warning: no previously-included files matching '*.pyd' found anywhere in distribution
+  warning: no previously-included files matching '*.so' found anywhere in distribution
+  warning: no previously-included files matching '*.lib' found anywhere in distribution
+  warning: no previously-included files matching '*.dll' found anywhere in distribution
+  warning: no previously-included files matching '*.a' found anywhere in distribution
+  warning: no previously-included files matching '*.obj' found anywhere in distribution
+  warning: no previously-included files found matching 'aiohttp\*.html'
+  no previously-included directories found matching 'docs\_build'
+  adding license file 'LICENSE.txt'
+  writing manifest file 'aiohttp.egg-info\SOURCES.txt'
+  C:\Users\imdip\AppData\Local\Temp\pip-build-env-fjhjztui\overlay\Lib\site-packages\setuptools\command\build_py.py:215: _Warning: Package 'aiohttp._websocket' is absent from the `packages` configuration.
+  !!
+  
+          ********************************************************************************
+          ############################
+          # Package would be ignored #
+          ############################
+          Python recognizes 'aiohttp._websocket' as an importable package[^1],
+          but it is absent from setuptools' `packages` configuration.
+  
+          This leads to an ambiguous overall configuration. If you want to distribute this
+          package, please make sure that 'aiohttp._websocket' is explicitly added
+          to the `packages` configuration field.
+  
+          Alternatively, you can also rely on setuptools' discovery methods
+          (for example by using `find_namespace_packages(...)`/`find_namespace:`
+          instead of `find_packages(...)`/`find:`).
+  
+          You can read more about "package discovery" on setuptools documentation page:
+  
+          - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+  
+          If you don't want 'aiohttp._websocket' to be distributed and are
+          already explicitly excluding 'aiohttp._websocket' via
+          `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+          you can try to use `exclude_package_data`, or `include-package-data=False` in
+          combination with a more fine grained `package-data` configuration.
+  
+          You can read more about "package data files" on setuptools documentation page:
+  
+          - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+  
+  
+          [^1]: For Python, any directory (with suitable naming) can be imported,
+                even if it does not contain any `.py` files.
+                On the other hand, currently there is no concept of package data
+                directory, all directories are treated like packages.
+          ********************************************************************************
+  
+  !!
+    check.warn(importable)
+  copying aiohttp\_cparser.pxd -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\_find_header.pxd -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\_headers.pxi -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\_http_parser.pyx -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\_http_writer.pyx -> build\lib.win-amd64-cpython-314\aiohttp
+  copying aiohttp\py.typed -> build\lib.win-amd64-cpython-314\aiohttp
+  creating build\lib.win-amd64-cpython-314\aiohttp\.hash
+  copying aiohttp\.hash\_cparser.pxd.hash -> build\lib.win-amd64-cpython-314\aiohttp\.hash
+  copying aiohttp\.hash\_find_header.pxd.hash -> build\lib.win-amd64-cpython-314\aiohttp\.hash
+  copying aiohttp\.hash\_http_parser.pyx.hash -> build\lib.win-amd64-cpython-314\aiohttp\.hash
+  copying aiohttp\.hash\_http_writer.pyx.hash -> build\lib.win-amd64-cpython-314\aiohttp\.hash
+  copying aiohttp\.hash\hdrs.py.hash -> build\lib.win-amd64-cpython-314\aiohttp\.hash
+  copying aiohttp\_websocket\mask.pxd -> build\lib.win-amd64-cpython-314\aiohttp\_websocket
+  copying aiohttp\_websocket\mask.pyx -> build\lib.win-amd64-cpython-314\aiohttp\_websocket
+  copying aiohttp\_websocket\reader_c.pxd -> build\lib.win-amd64-cpython-314\aiohttp\_websocket
+  creating build\lib.win-amd64-cpython-314\aiohttp\_websocket\.hash
+  copying aiohttp\_websocket\.hash\mask.pxd.hash -> build\lib.win-amd64-cpython-314\aiohttp\_websocket\.hash
+  copying aiohttp\_websocket\.hash\mask.pyx.hash -> build\lib.win-amd64-cpython-314\aiohttp\_websocket\.hash
+  copying aiohttp\_websocket\.hash\reader_c.pxd.hash -> build\lib.win-amd64-cpython-314\aiohttp\_websocket\.hash
+  running build_ext
+  building 'aiohttp._websocket.mask' extension
+  error: Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/
+  [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for aiohttp
+error: failed-wheel-build-for-install
+
+Failed to build installable wheels for some pyproject.toml based projects
+
+aiohttp
+Traceback (most recent call last):
+  File "C:\Users\imdip\Desktop\Vidlecta\scripts\deliver_stars.py", line 11, in <module>
+    from tonutils.client import TonapiClient
+ModuleNotFoundError: No module named 'tonutils'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\imdip\Desktop\Vidlecta\scripts\deliver_stars.py", line 16, in <module>
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "tonutils"])
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 419, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['C:\\Python314\\python.exe', '-m', 'pip', 'install', 'tonutils']' returned non-zero exit status 1.
+
+[2026-01-24T18:51:54.044Z] Triggering Auto-Buy for VID-MKSO1Y65-13C682
+[2026-01-24T18:51:54.059Z] Starting delivery: 50 stars to BAG1BAG1 (Order 5c1b9c27-df8a-4e37-96ff-7f179211ea2f)
+[2026-01-24T18:51:54.064Z] Settings loaded. Hash present: true
+[2026-01-24T18:51:54.065Z] Searching recipient...
+[2026-01-24T18:51:54.244Z] Search fetch status: 200
+[2026-01-24T18:51:54.246Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T18:51:54.246Z] Init buy request...
+[2026-01-24T18:51:54.322Z] Init response: {"req_id":"wyAV0rwwoaE3yC21e8A81muO","myself":true,"to_bot":false,"amount":"0.4871","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4871</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T18:51:54.322Z] Init success. ReqID: wyAV0rwwoaE3yC21e8A81muO, Amount: 0.4871
+[2026-01-24T18:51:54.414Z] Prepared Transaction: Amount=0.4871 TON, Comment=50 Telegram Stars 
+
+Ref#uVtlVclfR
+[2026-01-24T18:51:54.652Z] Wallet Info: Seqno=0, Balance=0
+[2026-01-24T18:51:54.659Z] Seqno is 0. Manually attaching StateInit.
+[2026-01-24T18:51:54.685Z] Stars Delivery Error: Invalid address: 3
+Error: Invalid address: 3
+    at BitReader.loadAddress (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\node_modules_ton-core_dist_e155ab1d._.js:2774:19)
+    at Slice.loadAddress (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\node_modules_ton-core_dist_e155ab1d._.js:2358:29)
+    at loadCommonMessageInfo (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\node_modules_ton-core_dist_e155ab1d._.js:6087:23)
+    at loadMessage (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\node_modules_ton-core_dist_e155ab1d._.js:6292:64)
+    at FragmentService.deliverStars (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__a06f8874._.js:501:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__a06f8874._.js:655:36
+[2026-01-24T18:55:55.792Z] Triggering Auto-Buy for VID-MKSO71N1-A19814
+[2026-01-24T18:55:55.807Z] Starting delivery: 50 stars to BAG1BAG1 (Order 1a2dc3ba-56d6-4f0e-81b0-58b923806485)
+[2026-01-24T18:55:55.815Z] Settings loaded. Hash present: true
+[2026-01-24T18:55:55.816Z] Searching recipient...
+[2026-01-24T18:55:56.055Z] Search fetch status: 200
+[2026-01-24T18:55:56.056Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T18:55:56.056Z] Init buy request...
+[2026-01-24T18:55:56.149Z] Init response: {"req_id":"akCflnGDCf7n7RCkR4tlTkZb","myself":true,"to_bot":false,"amount":"0.4872","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4872</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T18:55:56.149Z] Init success. ReqID: akCflnGDCf7n7RCkR4tlTkZb, Amount: 0.4872
+[2026-01-24T18:55:56.263Z] Prepared Transaction: Amount=0.4872 TON, Comment=50 Telegram Stars 
+
+Ref#1AFs1eGiv
+[2026-01-24T18:55:56.488Z] Wallet Info: Seqno=0, Balance=0
+[2026-01-24T18:55:56.496Z] Manual BOC created. Size: 1324. Init attached: true
+[2026-01-24T18:55:56.656Z] Broadcast failed: 401 {"error":"illegal base32 data at input byte 70"}
+[2026-01-24T18:58:18.858Z] Triggering Auto-Buy for VID-MKSOA6VS-C6741F
+[2026-01-24T18:58:18.873Z] Starting delivery: 50 stars to BAG1BAG1 (Order fb4a9e8e-4fa4-41ff-a0ff-6ff928ba1a91)
+[2026-01-24T18:58:18.879Z] Settings loaded. Hash present: true
+[2026-01-24T18:58:18.879Z] Searching recipient...
+[2026-01-24T18:58:19.145Z] Search fetch status: 200
+[2026-01-24T18:58:19.148Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T18:58:19.148Z] Init buy request...
+[2026-01-24T18:58:19.252Z] Init response: {"req_id":"BrQD8W-RUNcFgd-ZVZ0TEF7Q","myself":true,"to_bot":false,"amount":"0.4871","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4871</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T18:58:19.252Z] Init success. ReqID: BrQD8W-RUNcFgd-ZVZ0TEF7Q, Amount: 0.4871
+[2026-01-24T18:58:19.374Z] Prepared Transaction: Amount=0.4871 TON, Comment=50 Telegram Stars 
+
+Ref#DfsegHEWm
+[2026-01-24T18:58:19.732Z] Wallet Info: Seqno=0, Balance=12623642395
+[2026-01-24T18:58:19.741Z] Manual BOC created. Size: 1324. Init attached: true
+[2026-01-24T18:58:19.878Z] Broadcast failed: 406 {"error":"error code: 0 message: cannot apply external message to current state : External message was not accepted\nCannot run message on account: inbound external message rejected by transaction 84B5E4490DAF7EF8A69E3261BC9426B14E7DCD0E5473E0174356C08FDCFD5270:\nexitcode=33, steps=23, gas_used=0\nVM Log (truncated):\n...te NOW\nexecute LEQ\nexecute THROWIF 36\nexecute PUSH c4\nexecute CTOS\nexecute LDU 32\nexecute LDU 32\nexecute LDU 256\nexecute LDDICT\nexecute ENDS\nexecute XCPU s4,s3\nexecute EQUAL\nexecute THROWIFNOT 33\ndefault exception handler, terminating vm with exit code 33\n"}
+[2026-01-24T19:00:41.815Z] Triggering Auto-Buy for VID-MKSOD8PS-A80A9A
+[2026-01-24T19:00:41.829Z] Starting delivery: 50 stars to BAG1BAG1 (Order 9677afcf-e586-422a-98ed-391f760c06b4)
+[2026-01-24T19:00:41.833Z] Settings loaded. Hash present: true
+[2026-01-24T19:00:41.834Z] Searching recipient...
+[2026-01-24T19:00:42.008Z] Search fetch status: 200
+[2026-01-24T19:00:42.010Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T19:00:42.010Z] Init buy request...
+[2026-01-24T19:00:42.118Z] Init response: {"req_id":"2Sva7X2JT0PzFdDAuIqlltkr","myself":true,"to_bot":false,"amount":"0.4869","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4869</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T19:00:42.119Z] Init success. ReqID: 2Sva7X2JT0PzFdDAuIqlltkr, Amount: 0.4869
+[2026-01-24T19:00:42.215Z] Prepared Transaction: Amount=0.4869 TON, Comment=50 Telegram Stars 
+
+Ref#FQVTbM4nl
+[2026-01-24T19:00:42.523Z] Wallet Info: Status=active, Seqno=0, Balance=12623642395
+[2026-01-24T19:00:42.531Z] Building packet. Status: active -> Init: false
+[2026-01-24T19:00:42.533Z] Manual BOC created. Size: 296. Init attached: false
+[2026-01-24T19:00:42.645Z] Broadcast failed: 406 {"error":"error code: 0 message: cannot apply external message to current state : External message was not accepted\nCannot run message on account: inbound external message rejected by transaction 84B5E4490DAF7EF8A69E3261BC9426B14E7DCD0E5473E0174356C08FDCFD5270:\nexitcode=33, steps=23, gas_used=0\nVM Log (truncated):\n...te NOW\nexecute LEQ\nexecute THROWIF 36\nexecute PUSH c4\nexecute CTOS\nexecute LDU 32\nexecute LDU 32\nexecute LDU 256\nexecute LDDICT\nexecute ENDS\nexecute XCPU s4,s3\nexecute EQUAL\nexecute THROWIFNOT 33\ndefault exception handler, terminating vm with exit code 33\n"}
+[2026-01-24T19:02:08.947Z] Triggering Auto-Buy for VID-MKSOF4QC-3269C0
+[2026-01-24T19:02:08.963Z] Starting delivery: 50 stars to BAG1BAG1 (Order 4d8090fe-59ad-4a53-8a0d-49506563171d)
+[2026-01-24T19:02:08.968Z] Settings loaded. Hash present: true
+[2026-01-24T19:02:08.968Z] Searching recipient...
+[2026-01-24T19:02:09.227Z] Search fetch status: 200
+[2026-01-24T19:02:09.230Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T19:02:09.230Z] Init buy request...
+[2026-01-24T19:02:09.345Z] Init response: {"req_id":"flUBp7CY2pwClfGVbiwTH-WH","myself":true,"to_bot":false,"amount":"0.4869","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4869</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T19:02:09.345Z] Init success. ReqID: flUBp7CY2pwClfGVbiwTH-WH, Amount: 0.4869
+[2026-01-24T19:02:09.455Z] Prepared Transaction: Amount=0.4869 TON, Comment=50 Telegram Stars 
+
+Ref#JvMMwAv1S
+[2026-01-24T19:02:09.814Z] Wallet Info: Status=active, Seqno=NaN, Balance=12623642395
+[2026-01-24T19:02:09.846Z] Stars Delivery Error: The number NaN cannot be converted to a BigInt because it is not an integer
+RangeError: The number NaN cannot be converted to a BigInt because it is not an integer
+    at BigInt (<anonymous>)
+    at BitBuilder.writeUint (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\node_modules_ton-core_dist_e155ab1d._.js:725:17)
+    at Builder.storeUint (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\node_modules_ton-core_dist_e155ab1d._.js:4244:20)
+    at FragmentService.deliverStars (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__a06f8874._.js:530:98)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__a06f8874._.js:693:36
+[2026-01-24T19:04:12.022Z] Triggering Auto-Buy for VID-MKSOHS1F-BF4086
+[2026-01-24T19:04:12.041Z] Starting delivery: 50 stars to BAG1BAG1 (Order 5a51a639-e1c9-4eee-a250-3cf1fec03a4d)
+[2026-01-24T19:04:12.056Z] Settings loaded. Hash present: true
+[2026-01-24T19:04:12.056Z] Searching recipient...
+[2026-01-24T19:04:12.323Z] Search fetch status: 200
+[2026-01-24T19:04:12.328Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T19:04:12.328Z] Init buy request...
+[2026-01-24T19:04:12.440Z] Init response: {"req_id":"AFACewXj2F7dJTZi0gH8hG0m","myself":true,"to_bot":false,"amount":"0.4869","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4869</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T19:04:12.440Z] Init success. ReqID: AFACewXj2F7dJTZi0gH8hG0m, Amount: 0.4869
+[2026-01-24T19:04:12.563Z] Prepared Transaction: Amount=0.4869 TON, Comment=50 Telegram Stars 
+
+Ref#LzenQ860R
+[2026-01-24T19:04:13.044Z] Wallet Info: Status=active, Seqno=0, Balance=12623642395
+[2026-01-24T19:04:13.052Z] Building packet. Status: active -> Init: false
+[2026-01-24T19:04:13.056Z] Manual BOC created. Size: 296. Init attached: false
+[2026-01-24T19:04:13.159Z] Broadcast failed: 406 {"error":"error code: 0 message: cannot apply external message to current state : External message was not accepted\nCannot run message on account: inbound external message rejected by transaction 84B5E4490DAF7EF8A69E3261BC9426B14E7DCD0E5473E0174356C08FDCFD5270:\nexitcode=33, steps=23, gas_used=0\nVM Log (truncated):\n...te NOW\nexecute LEQ\nexecute THROWIF 36\nexecute PUSH c4\nexecute CTOS\nexecute LDU 32\nexecute LDU 32\nexecute LDU 256\nexecute LDDICT\nexecute ENDS\nexecute XCPU s4,s3\nexecute EQUAL\nexecute THROWIFNOT 33\ndefault exception handler, terminating vm with exit code 33\n"}
+[2026-01-24T19:06:09.992Z] Triggering Auto-Buy for VID-MKSOHRMR-3C1C7C
+[2026-01-24T19:06:10.007Z] Starting delivery: 50 stars to BAG1BAG1 (Order 2305cf81-4184-4e0b-9561-58f7d4711447)
+[2026-01-24T19:06:10.014Z] Settings loaded. Hash present: true
+[2026-01-24T19:06:10.014Z] Searching recipient...
+[2026-01-24T19:06:10.197Z] Search fetch status: 200
+[2026-01-24T19:06:10.199Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T19:06:10.199Z] Init buy request...
+[2026-01-24T19:06:10.285Z] Init response: {"req_id":"j-dG_FYzvobnsUl6tWDV55Nb","myself":true,"to_bot":false,"amount":"0.4868","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4868</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T19:06:10.286Z] Init success. ReqID: j-dG_FYzvobnsUl6tWDV55Nb, Amount: 0.4868
+[2026-01-24T19:06:10.375Z] Prepared Transaction: Amount=0.4868 TON, Comment=50 Telegram Stars 
+
+Ref#XHjYmKyle
+[2026-01-24T19:06:10.689Z] Fetching runGetMethod seqno...
+[2026-01-24T19:06:10.785Z] runGetMethod raw: {"success":true,"exit_code":0,"stack":[{"type":"num","num":"0xba"}],"decoded":{"state":186}}
+[2026-01-24T19:06:10.785Z] Wallet Info: Status=active, Seqno=186, Balance=12623642395
+[2026-01-24T19:06:10.792Z] Building packet. Status: active -> Init: false
+[2026-01-24T19:06:10.793Z] Manual BOC created. Size: 296. Init attached: false
+[2026-01-24T19:06:10.902Z] Transaction broadcasted successfully via TonAPI (Manual)!
+[2026-01-24T19:06:10.932Z] Stars Delivery Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].order.update()` invocation in
+C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__a06f8874._.js:596:146
+
+  593 }
+  594 __turbopack_context__.r("[externals]/fs [external] (fs, cjs)").appendFileSync('debug.log', `[${new Date().toISOString()}] Transaction broadcasted successfully via TonAPI (Manual)!\n`);
+  595 // Update Order as Completed
+→ 596 await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].order.update(
+Foreign key constraint failed on the field: `orders_executor_id_fkey (index)`
+PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].order.update()` invocation in
+C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__a06f8874._.js:596:146
+
+  593 }
+  594 __turbopack_context__.r("[externals]/fs [external] (fs, cjs)").appendFileSync('debug.log', `[${new Date().toISOString()}] Transaction broadcasted successfully via TonAPI (Manual)!\n`);
+  595 // Update Order as Completed
+→ 596 await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].order.update(
+Foreign key constraint failed on the field: `orders_executor_id_fkey (index)`
+    at In.handleRequestError (C:\Users\imdip\Desktop\Vidlecta\node_modules\@prisma\client\runtime\library.js:123:6854)
+    at In.handleAndLogRequestError (C:\Users\imdip\Desktop\Vidlecta\node_modules\@prisma\client\runtime\library.js:123:6188)
+    at In.request (C:\Users\imdip\Desktop\Vidlecta\node_modules\@prisma\client\runtime\library.js:123:5896)
+    at async l (C:\Users\imdip\Desktop\Vidlecta\node_modules\@prisma\client\runtime\library.js:128:10871)
+    at async FragmentService.deliverStars (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__a06f8874._.js:596:13)
+    at async C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__a06f8874._.js:712:36
+[2026-01-24T19:06:28.302Z] Triggering Auto-Buy for VID-MKSOKPSU-FB89DC
+[2026-01-24T19:06:28.303Z] Starting delivery: 50 stars to BAG1BAG1 (Order 6b5f5cf8-6428-4a87-acf9-3cc3af131048)
+[2026-01-24T19:06:28.307Z] Settings loaded. Hash present: true
+[2026-01-24T19:06:28.308Z] Searching recipient...
+[2026-01-24T19:06:28.463Z] Search fetch status: 200
+[2026-01-24T19:06:28.467Z] Recipient found: 8HX_rFqI-Ksc6yEKF6wRD3jNFu5fwL0hsGV8xK4hWI0fEEd80CUKPF76ETTTGSed
+[2026-01-24T19:06:28.467Z] Init buy request...
+[2026-01-24T19:06:28.553Z] Init response: {"req_id":"YNh6k4ihJOb1opNalq6fXm0I","myself":true,"to_bot":false,"amount":"0.4868","item_title":"<svg class=\"icon icon-telegram-stars\"><use class=\"icon-bg\" xlink:href=\"#icon-star\"></use><use class=\"icon-main\" xlink:href=\"#icon-colorful-star\"></use></svg> 50","content":"  <p class=\"popup-text\">Do you want to buy 50 <b>Telegram Stars</b> for&nbsp;<b>yourself</b>?</p>\n  <p class=\"popup-text\"><b>You</b> will receive a message like this:</p>\n  <div class=\"tm-gift-premium-preview\">\n        <div class=\"preview-sender-name preview-sender-hidden\">Someone</div>  <div class=\"preview-sender-name preview-sender-shown\">ᴋᴀᴡᴀsᴀᴋɪ НЕ РАБОТАЮ</div>\n  <div class=\"preview-sender-text\">sent you a gift for <span class=\"icon-before icon-ton-text\">0<span class=\"mini-frac\">.4868</span></span></div>\n      <picture class=\"preview-sticker js-preview-sticker\" width=\"144\" height=\"144\">\n    <source type=\"application/x-tgsticker\" srcset=\"/file/premium/gift3.tgs\">\n    <source type=\"image/svg+xml\" srcset=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iLTMwMCUiIHgyPSItMjAwJSIgeTE9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9Ii0xMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1vcGFjaXR5PSIuMDciLz48c3RvcCBvZmZzZXQ9IjExMCUiIHN0b3Atb3BhY2l0eT0iLjEiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MSIgZnJvbT0iLTMwMCUiIHRvPSIxMjAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJ4MiIgZnJvbT0iLTIwMCUiIHRvPSIxMzAwJSIgZHVyPSIzcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMjYyLDQ5OWMtMzcsMS0xMTgtMjgtMTQxLTU3LTEzLTE2LTgtNTYtOC03NiwwLTEyLDItMzAsMC00MiwxLTItNS0yLTYtNC03LTExLTYtMzUsMC00Niw2LTEzLDI5LTE4LDQyLTI0LDExLTQsMjItMTcsMzQtMjAsMTItNCw1OC0xMiw3MS0xNCwxNy0yLDMxLDExLDQ2LDExLDgsMCwxNC0xNiwyNi0xMSwxMCw1LDExLDE2LDE5LDIyLDE2LDEzLDU4LDE5LDY4LDM5LDgsMTktMywzNy02LDUzLTMsMTEsMCwyNiwxLDM3LDAsMTksNSw1OS04LDc2LTksMTAtMjMsMTItMzIsMjEtMywxLTQsOC04LDExLTExLDctMjksMTUtNDIsMTQtMSwwLTItMy0zLTMtMTcsMS0zMywxMS01MCwxM3oiLz48L3N2Zz4=\">\n    <img src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\">\n  </picture>\n    <div class=\"preview-gift-text\">50 Telegram Stars</div>\n    <div class=\"preview-gift-desc\">to unlock content and services</div>\n  </div>","button":"Buy Stars for ᴋᴀᴡᴀsᴀᴋɪ"}
+[2026-01-24T19:06:28.554Z] Init success. ReqID: YNh6k4ihJOb1opNalq6fXm0I, Amount: 0.4868
+[2026-01-24T19:06:28.648Z] Prepared Transaction: Amount=0.4868 TON, Comment=50 Telegram Stars 
+
+Ref#8KnbeOZ2E
+[2026-01-24T19:06:28.930Z] Fetching runGetMethod seqno...
+[2026-01-24T19:06:29.029Z] runGetMethod raw: {"success":true,"exit_code":0,"stack":[{"type":"num","num":"0xbb"}],"decoded":{"state":187}}
+[2026-01-24T19:06:29.029Z] Wallet Info: Status=active, Seqno=187, Balance=12134393246
+[2026-01-24T19:06:29.034Z] Building packet. Status: active -> Init: false
+[2026-01-24T19:06:29.035Z] Manual BOC created. Size: 296. Init attached: false
+[2026-01-24T19:06:29.141Z] Transaction broadcasted successfully via TonAPI (Manual)!
+[2026-01-24T19:06:29.156Z] Stars Delivery Error: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].order.update()` invocation in
+C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__a06f8874._.js:596:146
+
+  593 }
+  594 __turbopack_context__.r("[externals]/fs [external] (fs, cjs)").appendFileSync('debug.log', `[${new Date().toISOString()}] Transaction broadcasted successfully via TonAPI (Manual)!\n`);
+  595 // Update Order as Completed
+→ 596 await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].order.update(
+Foreign key constraint failed on the field: `orders_executor_id_fkey (index)`
+PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].order.update()` invocation in
+C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__a06f8874._.js:596:146
+
+  593 }
+  594 __turbopack_context__.r("[externals]/fs [external] (fs, cjs)").appendFileSync('debug.log', `[${new Date().toISOString()}] Transaction broadcasted successfully via TonAPI (Manual)!\n`);
+  595 // Update Order as Completed
+→ 596 await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].order.update(
+Foreign key constraint failed on the field: `orders_executor_id_fkey (index)`
+    at In.handleRequestError (C:\Users\imdip\Desktop\Vidlecta\node_modules\@prisma\client\runtime\library.js:123:6854)
+    at In.handleAndLogRequestError (C:\Users\imdip\Desktop\Vidlecta\node_modules\@prisma\client\runtime\library.js:123:6188)
+    at In.request (C:\Users\imdip\Desktop\Vidlecta\node_modules\@prisma\client\runtime\library.js:123:5896)
+    at async l (C:\Users\imdip\Desktop\Vidlecta\node_modules\@prisma\client\runtime\library.js:128:10871)
+    at async FragmentService.deliverStars (C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__a06f8874._.js:596:13)
+    at async C:\Users\imdip\Desktop\Vidlecta\.next\dev\server\chunks\[root-of-the-server]__a06f8874._.js:712:36

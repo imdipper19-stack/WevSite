@@ -1,0 +1,303 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://vidlecta:vidlecta_secret@localhost:5433/vidlecta"
+}
+
+model User {
+  id              String          @id @default(uuid())
+  email           String?         @unique
+  phone           String?         @unique
+  passwordHash    String?         @map("password_hash")
+  role            UserRole        @default(BUYER)
+  firstName       String?         @map("first_name")
+  lastName        String?         @map("last_name")
+  avatarUrl       String?         @map("avatar_url")
+  balance         Decimal         @default(0) @db.Decimal(10, 2)
+  coins           Int             @default(0)
+  isVerified      Boolean         @default(false) @map("is_verified")
+  isEmailVerified Boolean         @default(false) @map("is_email_verified")
+  isPhoneVerified Boolean         @default(false) @map("is_phone_verified")
+  isBanned        Boolean         @default(false) @map("is_banned")
+  twoFaEnabled    Boolean         @default(false) @map("two_fa_enabled")
+  twoFaSecret     String?         @map("two_fa_secret")
+  vkId            String?         @unique @map("vk_id")
+  telegramId      String?         @unique @map("telegram_id")
+  createdAt       DateTime        @default(now()) @map("created_at")
+  updatedAt       DateTime        @updatedAt @map("updated_at")
+  lastLoginAt     DateTime?       @map("last_login_at")
+  executor        Executor?
+  messages        Message[]
+  notifications   Notification[]
+  orders          Order[]         @relation("BuyerOrders")
+  executorOrders  Order[]         @relation("ExecutorOrders")
+  reviews         Review[]
+  sessions        Session[]
+  ticketMessages  TicketMessage[]
+  tickets         Ticket[]
+  transactions    Transaction[]
+
+  @@map("users")
+}
+
+model Executor {
+  userId          String   @id @map("user_id")
+  rating          Decimal  @default(0) @db.Decimal(3, 2)
+  completedOrders Int      @default(0) @map("completed_orders")
+  isAvailable     Boolean  @default(true) @map("is_available")
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("executors")
+}
+
+model Session {
+  id           String   @id @default(uuid())
+  userId       String   @map("user_id")
+  token        String   @unique
+  deviceInfo   String?  @map("device_info")
+  ipAddress    String?  @map("ip_address")
+  userAgent    String?  @map("user_agent")
+  lastActivity DateTime @default(now()) @map("last_activity")
+  expiresAt    DateTime @map("expires_at")
+  createdAt    DateTime @default(now()) @map("created_at")
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("sessions")
+}
+
+model Order {
+  id                String        @id @default(uuid())
+  orderNumber       String        @unique @map("order_number")
+  buyerId           String        @map("buyer_id")
+  executorId        String?       @map("executor_id")
+  coinsAmount       Int           @map("coins_amount")
+  pricePerCoin      Decimal       @map("price_per_coin") @db.Decimal(10, 4)
+  totalPrice        Decimal       @map("total_price") @db.Decimal(10, 2)
+  status            OrderStatus   @default(PENDING_PAYMENT)
+  tiktokLogin       String?       @map("tiktok_login")
+  tiktokPassword    String?       @map("tiktok_password")
+  tiktokSmsCode     String?       @map("tiktok_sms_code")
+  credentialsSentAt DateTime?     @map("credentials_sent_at")
+  createdAt         DateTime      @default(now()) @map("created_at")
+  updatedAt         DateTime      @updatedAt @map("updated_at")
+  paidAt            DateTime?     @map("paid_at")
+  completedAt       DateTime?     @map("completed_at")
+  fragmentTxId      String?       @map("fragment_tx_id")
+  productType       ProductType   @default(TIKTOK_COINS) @map("product_type")
+  telegramUsername  String?       @map("telegram_username")
+  tonTxHash         String?       @map("ton_tx_hash")
+  paymentMethod     String?       @map("payment_method")
+  messages          Message[]
+  buyer             User          @relation("BuyerOrders", fields: [buyerId], references: [id])
+  executor          User?         @relation("ExecutorOrders", fields: [executorId], references: [id])
+  review            Review?
+  transactions      Transaction[]
+
+  @@index([buyerId])
+  @@index([executorId])
+  @@index([status])
+  @@index([productType])
+  @@map("orders")
+}
+
+model Transaction {
+  id            String            @id @default(uuid())
+  userId        String            @map("user_id")
+  orderId       String?           @map("order_id")
+  type          TransactionType
+  status        TransactionStatus @default(PENDING)
+  amount        Decimal           @db.Decimal(10, 2)
+  paymentMethod String?           @map("payment_method")
+  paymentId     String?           @map("payment_id")
+  paymentData   Json?             @map("payment_data")
+  description   String?
+  createdAt     DateTime          @default(now()) @map("created_at")
+  updatedAt     DateTime          @updatedAt @map("updated_at")
+  order         Order?            @relation(fields: [orderId], references: [id])
+  user          User              @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+  @@index([orderId])
+  @@map("transactions")
+}
+
+model Message {
+  id        String   @id @default(uuid())
+  orderId   String   @map("order_id")
+  senderId  String   @map("sender_id")
+  content   String
+  isSystem  Boolean  @default(false) @map("is_system")
+  isRead    Boolean  @default(false) @map("is_read")
+  createdAt DateTime @default(now()) @map("created_at")
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  sender    User     @relation(fields: [senderId], references: [id])
+
+  @@index([orderId])
+  @@index([senderId])
+  @@map("messages")
+}
+
+model Review {
+  id         String   @id @default(uuid())
+  orderId    String   @unique @map("order_id")
+  authorId   String   @map("author_id")
+  rating     Int      @db.SmallInt
+  content    String?  @db.VarChar(500)
+  images     String[]
+  isApproved Boolean  @default(false) @map("is_approved")
+  isVisible  Boolean  @default(true) @map("is_visible")
+  createdAt  DateTime @default(now()) @map("created_at")
+  updatedAt  DateTime @updatedAt @map("updated_at")
+  author     User     @relation(fields: [authorId], references: [id])
+  order      Order    @relation(fields: [orderId], references: [id])
+
+  @@index([authorId])
+  @@map("reviews")
+}
+
+model Notification {
+  id        String           @id @default(uuid())
+  userId    String           @map("user_id")
+  type      NotificationType
+  title     String
+  content   String
+  data      Json?
+  isRead    Boolean          @default(false) @map("is_read")
+  createdAt DateTime         @default(now()) @map("created_at")
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("notifications")
+}
+
+model SeoPage {
+  id             String   @id @default(uuid())
+  slug           String   @unique
+  title          String
+  description    String?  @db.VarChar(500)
+  keywords       String?
+  ogImage        String?  @map("og_image")
+  structuredData Json?    @map("structured_data")
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+
+  @@map("seo_pages")
+}
+
+model FaqItem {
+  id        String   @id @default(uuid())
+  question  String
+  answer    String
+  category  String?
+  order     Int      @default(0)
+  isVisible Boolean  @default(true) @map("is_visible")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("faq_items")
+}
+
+model Setting {
+  key         String   @id
+  value       Json
+  description String?
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("settings")
+}
+
+model Ticket {
+  id        String          @id @default(uuid())
+  subject   String
+  authorId  String          @map("author_id")
+  status    TicketStatus    @default(OPEN)
+  priority  TicketPriority  @default(MEDIUM)
+  createdAt DateTime        @default(now()) @map("created_at")
+  updatedAt DateTime        @updatedAt @map("updated_at")
+  messages  TicketMessage[]
+  author    User            @relation(fields: [authorId], references: [id])
+
+  @@index([authorId])
+  @@index([status])
+  @@map("tickets")
+}
+
+model TicketMessage {
+  id         String   @id @default(uuid())
+  ticketId   String   @map("ticket_id")
+  senderId   String   @map("sender_id")
+  content    String
+  isInternal Boolean  @default(false) @map("is_internal")
+  createdAt  DateTime @default(now()) @map("created_at")
+  sender     User     @relation(fields: [senderId], references: [id])
+  ticket     Ticket   @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+
+  @@index([ticketId])
+  @@index([senderId])
+  @@map("ticket_messages")
+}
+
+enum UserRole {
+  BUYER
+  EXECUTOR
+  ADMIN
+}
+
+enum ProductType {
+  TIKTOK_COINS
+  TELEGRAM_STARS
+}
+
+enum OrderStatus {
+  PENDING_PAYMENT
+  PAID
+  PROCESSING
+  AWAITING_CREDENTIALS
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+  REFUNDED
+}
+
+enum TransactionType {
+  DEPOSIT
+  WITHDRAWAL
+  PURCHASE
+  REFUND
+  PAYOUT
+}
+
+enum TransactionStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  CANCELLED
+}
+
+enum NotificationType {
+  ORDER_STATUS
+  PAYMENT
+  MESSAGE
+  REVIEW
+  SYSTEM
+}
+
+enum TicketStatus {
+  OPEN
+  IN_PROGRESS
+  CLOSED
+  RESOLVED
+}
+
+enum TicketPriority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
