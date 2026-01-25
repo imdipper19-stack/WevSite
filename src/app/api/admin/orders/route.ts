@@ -71,7 +71,9 @@ export async function GET(req: NextRequest) {
 
         return NextResponse.json({
             orders: orders.map(o => ({
-                id: o.orderNumber, // Using orderNumber as ID for display
+                id: o.id, // UUID for technical actions
+                orderNumber: o.orderNumber, // Display ID
+                displayId: o.orderNumber, // Backwards compatibility if needed
                 buyer: `${o.buyer.firstName || ''} ${o.buyer.lastName || ''}`.trim() || o.buyer.email,
                 executor: o.executor ? (`${o.executor.firstName || ''}`.trim() || o.executor.email) : null,
                 coins: o.coinsAmount,

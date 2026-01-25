@@ -21,7 +21,8 @@ import {
 import { Button, Card, CardContent } from '@/components/ui';
 
 interface Order {
-    id: string; // Order Number
+    id: string; // UUID
+    orderNumber: string; // Display ID e.g. #VID...
     buyer: string;
     executor?: string | null;
     coins: number;
@@ -221,7 +222,7 @@ export default function AdminOrdersPage() {
                                     const StatusIcon = status.icon;
                                     return (
                                         <tr key={order.id} className="border-b border-[var(--border)] hover:bg-[var(--background)]">
-                                            <td className="p-4 font-medium">#{order.id}</td>
+                                            <td className="p-4 font-medium">#{order.orderNumber}</td>
                                             <td className="p-4">{order.buyer}</td>
                                             <td className="p-4">
                                                 {order.executor ? (
