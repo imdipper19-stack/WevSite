@@ -260,6 +260,12 @@ export default function SettingsPage() {
         try {
             const croppedBlob = await getCroppedImg(selectedImage, croppedAreaPixels);
 
+            if (!croppedBlob) {
+                setMessage({ type: 'error', text: 'Ошибка обработки изображения' });
+                setIsLoading(false);
+                return;
+            }
+
             const formData = new FormData();
             formData.append('avatar', croppedBlob, 'avatar.jpg');
 
