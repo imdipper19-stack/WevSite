@@ -120,15 +120,14 @@ export default function AdminSettingsPage() {
                 </CardContent>
             </Card>
 
-            {/* Wallet Settings */}
+            {/* Wallet & Fragment Settings */}
             <Card>
                 <CardContent>
                     <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                         <Wallet className="w-5 h-5 text-yellow-500" />
-                        Кошелек TON (Для автовыплат)
+                        Настройки Auto-Delivery (Fragment)
                     </h3>
                     <div className="space-y-4">
-                        {/* Address input removed as requested */}
                         <div>
                             <label className="block text-sm font-medium mb-1">Мнемо-фраза (24 слова)</label>
                             <Input
@@ -138,9 +137,33 @@ export default function AdminSettingsPage() {
                                 placeholder="word1 word2 ..."
                             />
                             <p className="text-xs text-[var(--foreground-muted)] mt-1">
-                                Секретная фраза кошелька. Нужна для автоматической покупки звезд на Fragment.
+                                Секретная фраза кошелька для оплаты газа и транзакций TON.
                             </p>
                         </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label className="block text-sm font-medium mb-1">Fragment Hash</label>
+                                <Input
+                                    type="text"
+                                    value={settings.fragment_hash || ''}
+                                    onChange={(e) => handleChange('fragment_hash', e.target.value)}
+                                    placeholder="390bc..."
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium mb-1">Fragment Cookie</label>
+                                <Input
+                                    type="text"
+                                    value={settings.fragment_cookie || ''}
+                                    onChange={(e) => handleChange('fragment_cookie', e.target.value)}
+                                    placeholder="stel_ssid=..."
+                                />
+                            </div>
+                        </div>
+                        <p className="text-xs text-[var(--foreground-muted)]">
+                            Эти данные нужны для авторизации на fragment.com и покупки звёзд.
+                        </p>
                     </div>
                 </CardContent>
             </Card>
