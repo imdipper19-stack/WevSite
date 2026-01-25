@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import {
     Search,
     Filter,
@@ -14,7 +15,8 @@ import {
     ChevronLeft,
     ChevronRight,
     User,
-    Loader2
+    Loader2,
+    MessageCircle
 } from 'lucide-react';
 import { Button, Card, CardContent } from '@/components/ui';
 
@@ -124,10 +126,12 @@ export default function AdminOrdersPage() {
                     o.id === orderId ? { ...o, status: newStatus } : o
                 ));
             } else {
-                alert('Ошибка обновления статуса');
+                const data = await res.json();
+                alert(`Ошибка: ${data.error || 'Не удалось обновить статус'}`);
             }
         } catch (error) {
             console.error(error);
+            alert('Ошибка сети');
         }
     };
 
@@ -245,6 +249,11 @@ export default function AdminOrdersPage() {
                                                     <Button variant="ghost" size="icon">
                                                         <Eye size={16} />
                                                     </Button>
+                                                    <Link href={`/admin/orders/${order.id}/chat`}>
+                                                        <Button variant="ghost" size="icon" title="Чат с покупателем">
+                                                            <MessageCircle size={16} className="text-[var(--primary)]" />
+                                                        </Button>
+                                                    </Link>
 
                                                     {['PROCESSING', 'PENDING_PAYMENT'].includes(order.status) && (
                                                         <>
