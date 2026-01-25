@@ -86,18 +86,25 @@ async function handleTelegramAuth(body: any) {
 
         // 2. Verify Hash
         const data = { ...body };
-        delete data.hash; // Remove hash from data to check
+        delete data.hash;
 
-        const keys = Object.keys(data).sort();
-        const checkString = keys.map(k => `${k}=${data[k]}`).join('\n');
+        // ONLY include known Telegram fields to avoid hash mismatch if extra params exist
+        const validFields = ['auth_date', 'first_name', 'id', 'last_name', 'photo_url', 'username'];
+        const filteredData: Record<string, any> = {};
+
+        validFields.forEach(field => {
+            if (data[field] !== undefined) {
+                filteredData[field] = data[field];
+            }
+        });
+
+        const keys = Object.keys(filteredData).sort();
+        const checkString = keys.map(k => `${k}=${filteredData[k]}`).join('\n');
 
         const secretKey = crypto.createHash('sha256').update(botToken).digest();
         const hmac = crypto.createHmac('sha256', secretKey).update(checkString).digest('hex');
 
-        console.log('[TG Auth Debug] Data:', JSON.stringify(data));
         console.log('[TG Auth Debug] Check String:', JSON.stringify(checkString));
-        console.log('[TG Auth Debug] Hash:', hash);
-        console.log('[TG Auth Debug] HMAC:', hmac);
         console.log('[TG Auth Debug] Match:', hmac === hash);
 
         if (hmac !== hash) {
