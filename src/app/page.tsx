@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui';
 import { ReviewsCarousel } from '@/components/landing/ReviewsCarousel';
+import { TelegramWidget } from '@/components/landing/TelegramWidget';
 
 // Helper for Russian pluralization
 function getNoun(number: number, one: string, two: string, five: string) {
@@ -166,6 +167,10 @@ export default function HomePage() {
               <Link href="#faq" className="text-[var(--foreground-muted)] hover:text-[var(--foreground)] transition-colors">
                 FAQ
               </Link>
+              <a href="https://t.me/BAG1BAG1" target="_blank" rel="noopener noreferrer" className="text-[var(--foreground-muted)] hover:text-[#0088cc] transition-colors font-medium flex items-center gap-1">
+                <span className="w-2 h-2 rounded-full bg-[#0088cc] animate-pulse"></span>
+                Поддержка
+              </a>
             </div>
 
             {/* Auth Buttons */}
@@ -506,6 +511,7 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+      <TelegramWidget />
     </div>
   );
 }
