@@ -396,7 +396,7 @@ export class FragmentService {
                     data: {
                         status: OrderStatus.COMPLETED,
                         completedAt: new Date(),
-                        executorId: walletAddress.toString()
+                        // executorId is a relation to User table, cannot put wallet address string here.
                     }
                 });
                 console.log(`Order ${orderId} marked as COMPLETED.`);
