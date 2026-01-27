@@ -95,6 +95,34 @@ export default function AdminUsersPage() {
         }
     };
 
+    const handleUpdateRole = async (userId: string, newRole: string) => {
+        if (!confirm(`Изменить роль пользователя на ${newRole}?`)) return;
+
+        try {
+            // Optimistic update
+            setUsers(prev => prev.map(u =>
+                u.id === userId ? { ...u, role: newRole } : u
+            ));
+
+            const res = await fetch(`/api/admin/users/${userId}`, {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                // Backend expects uppercase generic role or specific enum. 
+                // Route just passes it. Prisma needs UpperCase.
+                body: JSON.stringify({ role: newRole.toUpperCase() })
+            });
+
+            if (!res.ok) {
+                const data = await res.json();
+                alert('Ошибка: ' + (data.error || 'Не удалось изменить роль'));
+                fetchUsers(); // Revert
+            }
+        } catch (error) {
+            console.error(error);
+            fetchUsers();
+        }
+    };
+
     useEffect(() => {
         const timeout = setTimeout(() => {
             fetchUsers();
@@ -224,9 +252,15 @@ export default function AdminUsersPage() {
                                             </div>
                                         </td>
                                         <td className="p-4">
-                                            <span className={`px-2 py-1 rounded-full text-xs font-medium ${roleLabels[user.role]?.color || 'bg-gray-500/10'}`}>
-                                                {roleLabels[user.role]?.label || user.role}
-                                            </span>
+                                            <select
+                                                value={user.role}
+                                                onChange={(e) => handleUpdateRole(user.id, e.target.value)}
+                                                className={`px-2 py-1 rounded text-xs font-medium border-none focus:outline-none cursor-pointer ${roleLabels[user.role]?.color || 'bg-gray-100'}`}
+                                            >
+                                                <option value="buyer">Покупатель</option>
+                                                <option value="executor">Исполнитель</option>
+                                                <option value="admin">Админ</option>
+                                            </select>
                                         </td>
                                         <td className="p-4 font-medium">{user.balance.toLocaleString()}₽</td>
                                         <td className="p-4">{user.ordersCount}</td>
