@@ -56,6 +56,24 @@ export async function POST(request: NextRequest) {
             failUrl: returnUrl,
         });
 
+        // Save Transaction to link Platega ID (payment.transactionId) with Order ID
+        if (payment.transactionId) {
+            await db.transaction.create({
+                data: {
+                    userId: currentUser.userId,
+                    orderId: order.id,
+                    type: 'PURCHASE',
+                    status: 'PENDING',
+                    amount: order.totalPrice,
+                    paymentMethod: 'PLATEGA',
+                    paymentId: payment.transactionId, // <-- The key to finding it later
+                    description: description
+                }
+            });
+        } else {
+            console.warn('Platega did not return transactionId. Callback lookup via ID will fail.');
+        }
+
         return NextResponse.json({
             success: true,
             url: payment.redirect || payment.paymentDetails

@@ -41,8 +41,26 @@ export async function POST(request: NextRequest) {
 
         let order;
 
-        // Try Lookup by ID
-        if (orderId) {
+        // Strategy 4: Lookup by Transaction Payment ID (body.id) - The Most Robust Way
+        // Platega callback returns `id` which is the transaction ID.
+        if (body.id) {
+            console.log(`Strategy 4 (Transaction Lookup): Searching for paymentId ${body.id}`);
+            const transaction = await db.transaction.findFirst({
+                where: { paymentId: body.id },
+                include: { order: true }
+            });
+
+            if (transaction && transaction.order) {
+                console.log(`Strategy 4: Found Order ${transaction.order.id} via Transaction ${transaction.id}`);
+                order = transaction.order;
+                orderId = order.id;
+            } else {
+                console.log(`Strategy 4: No transaction found for paymentId ${body.id}`);
+            }
+        }
+
+        // Try Lookup by ID (if strategies 1-2 found it)
+        if (orderId && !order) {
             order = await db.order.findUnique({ where: { id: orderId } });
             if (!order) console.log(`Lookup by ID ${orderId} returned null`);
         }
