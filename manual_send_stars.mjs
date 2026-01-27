@@ -13,7 +13,7 @@ const USERNAME = '@BAG1BAG1';
 const QUANTITY = 50;
 const FRAGMENT_HASH = '390bc6dad2e1e75434';
 const FRAGMENT_COOKIE = 'stel_ssid=30d08c4d6c7bfb8cc4_15772389599455901386; stel_dt=-180; stel_token=d1a6a1e783c54d2bb92a60617de2ab30d1a6a1fdd1a6aac787b6e50370dad016e1768; stel_ton_token=TzivBNbGKAGbwXtaaRdNy8_5M643D6o_d0UbXjVQs25ghazRAlBzC3mIMeBRSjVKOt6oL3BVKfk3txry57Df4lFOrlGXsK2HNXRoJTbgGQe6kWogjCZ3cxGB9aUJVGotleTSW9KhC4lJ-4w_gXu6-hnOA362ajKI7dJPjsk94zcwUoYxTmnby_zjZX1-9CvlZRPtDKyK';
-const MNEMONIC = 'verb push toddler execute oil pigeon stable ceiling swift impose shed retreat vessel spoon wrist chuckle metal deer carry derive program adapt picture minute';
+const MNEMONIC = 'sniff unable punch put thumb distance history wheat shallow lizard trip infant mistake surge ripple goddess update resemble improve enter arrive mad bacon dust';
 const TON_API_KEY = "AGAI6AUZN5C7RPQAAAAOSX3E3HQ4ZAJV635FYAV4KBS4QDWZCBXWX6D4RDGY52QPXHLGWZQ";
 // ========================================
 
