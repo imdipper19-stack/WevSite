@@ -99,29 +99,33 @@ export default function PayStarsPage() {
         setIsProcessing(true);
 
         try {
-            const res = await fetch('/api/orders/confirm-payment', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    orderId: order?.id,
-                    method: selectedPayment
-                }),
-            });
+            if (selectedPayment === 'sbp' || selectedPayment === 'card') { // Assuming both go through Platega for now
+                // Create payment via Platega
+                const res = await fetch('/api/payment/platega/create', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        orderId: order?.id
+                    }),
+                });
 
-            const data = await res.json();
+                const data = await res.json();
 
-            if (res.ok) {
-                setPaymentStatus('success');
-                setTimeout(() => {
-                    router.push('/dashboard/orders');
-                }, 3000);
-            } else {
-                setPaymentStatus('error');
+                if (res.ok && data.url) {
+                    window.location.href = data.url;
+                } else {
+                    console.error('Platega Init Error:', data);
+                    setPaymentStatus('error');
+                    setIsProcessing(false);
+                }
+                return;
             }
+
+            // Fallback for other methods if any (e.g. crypto manual)
+            // But currently only Card/SBP are shown.
         } catch (error) {
-            console.error('Verification failed', error);
+            console.error('Payment initiation failed', error);
             setPaymentStatus('error');
-        } finally {
             setIsProcessing(false);
         }
     };
@@ -283,27 +287,11 @@ export default function PayStarsPage() {
 
                             {selectedPayment === 'sbp' ? (
                                 <>
-                                    {/* SBP Details */}
-                                    <div className="bg-[var(--background)] rounded-xl p-4 mb-4">
-                                        <div className="space-y-3">
-                                            <div className="flex justify-between items-center border-b border-[var(--border)] pb-2">
-                                                <span className="text-[var(--foreground-muted)]">Банк</span>
-                                                <span className="font-medium">Сбербанк</span>
-                                            </div>
-                                            <div className="flex justify-between items-center border-b border-[var(--border)] pb-2">
-                                                <span className="text-[var(--foreground-muted)]">Номер телефона</span>
-                                                <div className="flex items-center gap-2">
-                                                    <span className="font-medium font-mono">+7 (999) 000-00-00</span>
-                                                    <Button variant="ghost" size="icon" className="h-6 w-6" onClick={() => navigator.clipboard.writeText('+79990000000')}>
-                                                        <Copy size={14} />
-                                                    </Button>
-                                                </div>
-                                            </div>
-                                            <div className="flex justify-between items-center">
-                                                <span className="text-[var(--foreground-muted)]">Получатель</span>
-                                                <span className="font-medium">Иван И.</span>
-                                            </div>
-                                        </div>
+                                    {/* SBP Details - REMOVED MANUAL DETAILS, Platega handles it */}
+                                    <div className="bg-[var(--background)] rounded-xl p-4 mb-4 text-center">
+                                        <p className="text-[var(--foreground-muted)]">
+                                            Вы будете перенаправлены на защищенную страницу оплаты Platega.
+                                        </p>
                                     </div>
 
                                     {/* Amount */}
@@ -319,15 +307,15 @@ export default function PayStarsPage() {
                                         </p>
                                     </div>
 
-                                    {/* Instructions */}
+                                    {/* Instructions for Platega SBP */}
                                     <div className="space-y-2 text-sm text-[var(--foreground-muted)] mb-6">
                                         <p className="flex items-start gap-2">
                                             <span className="w-5 h-5 bg-[var(--primary)]/20 rounded-full flex items-center justify-center text-xs font-bold text-[var(--primary)]">1</span>
-                                            Переведите точную сумму по СБП
+                                            Нажмите кнопку ниже для перехода к оплате
                                         </p>
                                         <p className="flex items-start gap-2">
                                             <span className="w-5 h-5 bg-[var(--primary)]/20 rounded-full flex items-center justify-center text-xs font-bold text-[var(--primary)]">2</span>
-                                            Вернитесь сюда и нажмите &quot;Я оплатил&quot;
+                                            Оплатите через приложение вашего банка по СБП
                                         </p>
                                     </div>
                                 </>
@@ -366,7 +354,7 @@ export default function PayStarsPage() {
                                 isLoading={isProcessing}
                                 className={selectedPayment === 'sbp' ? "!bg-yellow-500 hover:!bg-yellow-600 !text-black" : ""}
                             >
-                                {selectedPayment === 'sbp' ? 'Я оплатил' : 'Оплатить картой'}
+                                {selectedPayment === 'sbp' ? 'Перейти к оплате' : 'Оплатить картой'}
                             </Button>
                         </CardContent>
                     </Card>

@@ -28,7 +28,7 @@ const coinPackages = [
 
 const paymentMethods = [
     { id: 'card', name: 'Банковская карта', icon: CreditCard, description: 'Visa, MasterCard, МИР' },
-    { id: 'yoomoney', name: 'ЮMoney', icon: Wallet, description: 'Кошелек ЮMoney' },
+    // YooMoney removed as requested
     { id: 'sbp', name: 'СБП', icon: Wallet, description: 'Система быстрых платежей' },
 ];
 
@@ -36,7 +36,7 @@ export default function BuyCoinsPage() {
     const router = useRouter();
     const [selectedAmount, setSelectedAmount] = useState(1000);
     const [customAmount, setCustomAmount] = useState('');
-    const [selectedPayment, setSelectedPayment] = useState('card');
+    const [selectedPayment, setSelectedPayment] = useState('sbp'); // Default to SBP as requested
     const [isProcessing, setIsProcessing] = useState(false);
     const [error, setError] = useState('');
     const [pricePerCoin, setPricePerCoin] = useState(1.5); // Default, updated from API
@@ -81,6 +81,7 @@ export default function BuyCoinsPage() {
         setError('');
 
         try {
+            // 1. Create Order
             const res = await fetch('/api/orders', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -94,18 +95,40 @@ export default function BuyCoinsPage() {
 
             if (!res.ok) {
                 setError(data.error || 'Ошибка при создании заказа');
+                setIsProcessing(false);
                 return;
             }
 
-            // Order created successfully
-            alert(`Заказ #${data.order.orderNumber} успешно создан!\n\nСумма: ${data.order.totalPrice}₽\nСтатус: Ожидает оплаты\n\nВ демо-версии оплата не реализована.`);
+            // 2. Initiate Payment (Platega)
+            // Even if user selected card, we redirect to Platega (create route handles routing/method)
+            // Assuming create route uses PlategaClient which defaults to SBP or handles both?
+            // Currently create route hardcodes '2' (SBP).
+            // If user selected card, maybe Platega page allows choosing?
+            // Or we should pass paymentMethod to create route.
+            // But user said: "у нас доступен сейчас только СБП".
+            // So regardless of selection, we might default to SBP or warn.
+            // I'll wire BOTH to the create route which calls Platega.
 
-            // Redirect to orders page
-            router.push('/dashboard/orders');
+            const payRes = await fetch('/api/payment/platega/create', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    orderId: data.order.id
+                }),
+            });
+
+            const payData = await payRes.json();
+
+            if (payRes.ok && payData.url) {
+                window.location.href = payData.url;
+            } else {
+                setError('Ошибка создания платежа: ' + (payData.error || 'Unknown'));
+                setIsProcessing(false);
+            }
+
         } catch (err) {
             console.error(err);
             setError('Произошла ошибка сети');
-        } finally {
             setIsProcessing(false);
         }
     };
@@ -262,7 +285,7 @@ export default function BuyCoinsPage() {
                                 onClick={handlePurchase}
                                 rightIcon={!isProcessing ? <ChevronRight size={18} /> : undefined}
                             >
-                                {isProcessing ? 'Создание заказа...' : 'Оформить заказ'}
+                                {isProcessing ? 'Обработка...' : 'Оформить заказ'}
                             </Button>
 
                             {currentAmount < 30 && currentAmount > 0 && (
