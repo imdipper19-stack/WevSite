@@ -138,6 +138,14 @@ async function main() {
 
         const comment = `${QUANTITY} Telegram Stars \n\nRef#${refId}`;
 
+        // Get Account Status
+        const accountRes = await myFetch(`https://tonapi.io/v2/accounts/${walletAddress.toString()}`, {
+            headers: { 'Authorization': `Bearer ${TON_API_KEY}` }
+        });
+        const accountData = await accountRes.json();
+        const status = accountData.status || 'unknown';
+        console.log(`   Account Status: ${status}`);
+
         // Get Seqno
         const seqnoRes = await myFetch(`https://tonapi.io/v2/blockchain/accounts/${walletAddress.toString()}/methods/seqno`, {
             headers: { 'Authorization': `Bearer ${TON_API_KEY}` }
@@ -145,8 +153,8 @@ async function main() {
         let seqno = 0;
         if (seqnoRes.ok) {
             const d = await seqnoRes.json();
-            if (d.decoded && d.decoded.seqno) seqno = Number(d.decoded.seqno);
-            // fallback parsing logic omitted for brevity, assuming simple case works or 0
+            if (d.decoded && d.decoded.seqno !== undefined) seqno = Number(d.decoded.seqno);
+            else if (d.stack && d.stack.length > 0) seqno = Number(d.stack[0].value || d.stack[0][1]);
         }
         console.log(`   Seqno: ${seqno}`);
 
@@ -179,9 +187,10 @@ async function main() {
             .storeSlice(signingMessage.beginParse())
             .endCell();
 
+        const shouldInit = status === 'uninit';
         const extMsg = external({
             to: walletAddress,
-            // init: undefined, // Assuming wallet active
+            init: shouldInit ? wallet.init : undefined,
             body: body
         });
 
