@@ -64,8 +64,6 @@ export class PlategaClient {
             description: params.description,
             return: params.successUrl || 'https://google.com', // Placeholder if not provided
             failedUrl: params.failUrl || 'https://google.com',
-            externalId: params.orderId, // Using externalId to store our orderId
-            payload: JSON.stringify({ orderId: params.orderId }), // Extra payload just in case
         };
 
         const res = await fetch(url, {
