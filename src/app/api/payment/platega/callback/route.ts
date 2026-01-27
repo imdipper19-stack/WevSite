@@ -49,16 +49,48 @@ export async function POST(request: NextRequest) {
         }
 
         if (!orderId) {
-            console.error('Platega callback: Order ID not found in payload');
-            return NextResponse.json({ error: 'Order ID missing' }, { status: 400 });
+            // Try to parse from payload if we sent it there
+            try {
+                // If payload is a string (JSON), parse it. If object, use as is.
+                console.log('Parsing payload for orderId:', body.payload);
+                const p = typeof body.payload === 'string' ? JSON.parse(body.payload) : body.payload;
+
+                if (p && p.orderId) {
+                    orderId = p.orderId;
+                }
+            } catch (e) {
+                console.error('Failed to parse payload:', e);
+            }
         }
 
-        const order = await db.order.findUnique({
-            where: { id: orderId }
-        });
+        let order;
+
+        if (orderId) {
+            order = await db.order.findUnique({
+                where: { id: orderId }
+            });
+        }
+
+        // Fallback: Try to find by Order Number from description if ID not found
+        // Description format: "Оплата заказа #VID-XXXX-XXXX (Vidlecta)" or similar
+        if (!order && body.description) {
+            console.log('Trying to find order by description:', body.description);
+            // Match #VID-XXXX...
+            const match = body.description.match(/#(VID-[A-Z0-9-]+)/);
+            if (match && match[1]) {
+                const orderNumber = match[1];
+                console.log('Found orderNumber in description:', orderNumber);
+                order = await db.order.findUnique({
+                    where: { orderNumber: orderNumber }
+                });
+                if (order) {
+                    orderId = order.id; // Ensure orderId is set for status update log
+                }
+            }
+        }
 
         if (!order) {
-            console.error(`Platega callback: Order ${orderId} not found`);
+            console.error(`Platega callback: Order not found. ID: ${orderId}, Desc: ${body.description}`);
             return NextResponse.json({ error: 'Order not found' }, { status: 404 });
         }
 
