@@ -316,6 +316,8 @@ export class FragmentService {
             // Final safety check
             if (isNaN(seqno)) seqno = accountData.seqno || 0;
 
+            console.log(`[DEBUG] Wallet Status: ${status}, Fetched Seqno: ${seqno}`);
+
 
             // --- MANUAL BUILDER START ---
 
