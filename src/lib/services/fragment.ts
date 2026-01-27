@@ -295,10 +295,14 @@ export class FragmentService {
 
                         if (seqnoData.decoded && seqnoData.decoded.seqno !== undefined) {
                             seqno = Number(seqnoData.decoded.seqno);
+                        } else if (seqnoData.decoded && seqnoData.decoded.state !== undefined) {
+                            // Sometimes it returns 'state' instead of 'seqno'
+                            seqno = Number(seqnoData.decoded.state);
                         } else if (seqnoData.stack && seqnoData.stack.length > 0) {
-                            // Handle various stack formats (sometimes [type, value], sometimes objects)
+                            // Handle various stack formats (sometimes [type, value], sometimes objects with num)
                             const item = seqnoData.stack[0];
                             if (item && item.value) seqno = Number(item.value);
+                            else if (item && item.num) seqno = Number(item.num); // Fix for TonAPI v2
                             else if (Array.isArray(item) && item[1]) seqno = parseInt(item[1], 16) || Number(item[1]);
                             else seqno = 0;
                         }
