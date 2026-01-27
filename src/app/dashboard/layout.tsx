@@ -5,22 +5,19 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import {
     Coins,
+    LayoutDashboard,
     Home,
     ShoppingCart,
     Clock,
     Settings,
     HelpCircle,
-    LogOut,
-
     Menu,
     X,
-    ChevronDown,
+    LogOut,
     User,
-    Shield,
-    Star,
-    Lock
+    ChevronDown,
+    Star
 } from 'lucide-react';
-import { SupportBot } from '@/components/SupportBot';
 import { NotificationsPopover } from '@/components/NotificationsPopover';
 
 interface DashboardLayoutProps {
@@ -36,6 +33,8 @@ interface UserData {
     balance: number;
     coins: number;
     avatarUrl?: string | null;
+    totalSpent?: number;
+    completedOrders?: number;
 }
 
 const navigation = [
@@ -119,22 +118,34 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                         </button>
                     </div>
 
-                    {/* Balance Card */}
+                    {/* Stats Card (Replaced Balance) */}
                     <div className="p-4">
-                        <div className="p-4 bg-gradient-to-br from-[#6A11CB] to-[#2575FC] rounded-xl text-white">
-                            <p className="text-sm text-white/70 mb-1">Баланс</p>
-                            <p className="text-2xl font-bold mb-3">
-                                {(user?.balance || 0).toLocaleString('ru-RU')} ₽
-                            </p>
-                            <div className="flex items-center gap-2 text-sm">
+                        <div className="p-4 bg-gradient-to-br from-[#6A11CB] to-[#2575FC] rounded-xl text-white shadow-lg">
+                            <div className="flex items-center gap-2 mb-3 opacity-90">
                                 <Coins className="w-4 h-4" />
-                                <span>{(user?.coins || 0).toLocaleString('ru-RU')} монет</span>
+                                <span className="text-sm font-medium">Ваша статистика</span>
+                            </div>
+
+                            <div className="space-y-3">
+                                <div>
+                                    <p className="text-xs text-white/70">Всего потрачено</p>
+                                    <p className="text-xl font-bold">
+                                        {(user?.totalSpent || 0).toLocaleString('ru-RU')} ₽
+                                    </p>
+                                </div>
+
+                                <div className="flex items-center gap-2 pt-2 border-t border-white/20">
+                                    <ShoppingCart className="w-4 h-4 text-white/80" />
+                                    <span className="text-sm">
+                                        Заказов: {(user?.completedOrders || 0)}
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     {/* Navigation */}
-                    <nav className="flex-1 px-3 py-2">
+                    <nav className="flex-1 px-3 py-2 overflow-y-auto">
                         {navigation.map((item) => {
                             const isActive = pathname === item.href;
                             return (
@@ -145,7 +156,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                     flex items-center gap-3 px-3 py-2.5 rounded-lg mb-1 transition-colors
                     ${isActive
                                             ? 'bg-[var(--primary)]/10 text-[var(--primary)]'
-                                            : 'text-[var(--foreground-muted)] hover:bg-[var(--border)] hover:text-[var(--foreground)]'
+                                            : 'text-[var(--foreground-muted)] hover:bg-[var(--background)] hover:text-[var(--foreground)]'
                                         }
                   `}
                                     onClick={() => setSidebarOpen(false)}
@@ -155,15 +166,14 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                                 </Link>
                             );
                         })}
-
-                        {/* Admin link for ADMIN users */}
+                        {/* Admin Link if role is ADMIN */}
                         {user?.role === 'ADMIN' && (
                             <Link
                                 href="/admin"
                                 className="flex items-center gap-3 px-3 py-2.5 rounded-lg mb-1 transition-colors text-[var(--warning)] hover:bg-[var(--warning)]/10"
                                 onClick={() => setSidebarOpen(false)}
                             >
-                                <Shield size={20} />
+                                <Coins size={20} />
                                 <span className="font-medium">Админ-панель</span>
                             </Link>
                         )}
@@ -173,20 +183,29 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                                 className="flex items-center gap-3 px-3 py-2.5 rounded-lg mb-1 transition-colors text-[var(--primary)] hover:bg-[var(--primary)]/10"
                                 onClick={() => setSidebarOpen(false)}
                             >
-                                <Shield size={20} />
+                                <Coins size={20} />
                                 <span className="font-medium">Панель Исполнителя</span>
                             </Link>
                         )}
                     </nav>
 
-                    {/* User Menu */}
-                    <div className="p-4 border-t border-[var(--border)]">
+                    {/* User Profile (Mobile Sidebar Footer) */}
+                    <div className="p-4 border-t border-[var(--border)] lg:hidden">
+                        <div className="flex items-center gap-3 mb-3">
+                            <div className="w-10 h-10 bg-[var(--primary)]/10 rounded-full flex items-center justify-center text-[var(--primary)] font-semibold">
+                                {userInitial}
+                            </div>
+                            <div>
+                                <p className="font-medium">{user?.firstName}</p>
+                                <p className="text-xs text-[var(--foreground-muted)]">{user?.email}</p>
+                            </div>
+                        </div>
                         <button
                             onClick={handleLogout}
-                            className="flex items-center gap-3 w-full px-3 py-2 text-[var(--error)] hover:bg-[var(--error)]/10 rounded-lg transition-colors"
+                            className="flex items-center gap-2 text-[var(--error)] text-sm font-medium w-full p-2 hover:bg-[var(--error)]/5 rounded-lg transition-colors"
                         >
-                            <LogOut size={20} />
-                            <span className="font-medium">Выйти</span>
+                            <LogOut size={18} />
+                            Выйти
                         </button>
                     </div>
                 </div>
@@ -194,64 +213,28 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
 
             {/* Main Content */}
             <div className="flex-1 flex flex-col min-w-0">
-                {/* Top Bar */}
-                <header className="h-16 bg-[var(--card-bg)] border-b border-[var(--border)] flex items-center justify-between px-4 lg:px-6">
-                    {/* Mobile Menu Button */}
+                {/* Header */}
+                <header className="h-16 bg-[var(--card-bg)] border-b border-[var(--border)] flex items-center justify-between px-4 lg:px-6 sticky top-0 z-30">
                     <button
-                        className="lg:hidden p-2 -ml-2"
+                        className="lg:hidden p-1 -ml-2"
                         onClick={() => setSidebarOpen(true)}
                     >
                         <Menu size={24} />
                     </button>
 
-                    {/* Search (Desktop) */}
-                    <div className="hidden lg:block flex-1 max-w-md">
-                        <div className="relative">
-                            <input
-                                type="text"
-                                placeholder="Поиск..."
-                                className="w-full px-4 py-2 pl-10 bg-[var(--background)] border border-[var(--border)] rounded-lg focus:outline-none focus:border-[var(--primary)]"
-                            />
-                            <svg
-                                className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--foreground-muted)]"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                                />
-                            </svg>
-                        </div>
-                    </div>
-
-                    {/* Right Side */}
-                    <div className="flex items-center gap-3">
-                        {/* Notifications */}
+                    <div className="flex items-center gap-4 ml-auto">
                         <NotificationsPopover />
 
-                        {/* User Dropdown */}
+                        {/* User Menu */}
                         <div className="relative">
                             <button
                                 onClick={() => setUserMenuOpen(!userMenuOpen)}
-                                className="flex items-center gap-2 p-1.5 hover:bg-[var(--border)] rounded-lg transition-colors"
+                                className="flex items-center gap-2 hover:bg-[var(--background)] p-1.5 rounded-lg transition-colors"
                             >
-                                {user?.avatarUrl ? (
-                                    <img
-                                        src={user.avatarUrl}
-                                        alt={user.firstName}
-                                        className="w-8 h-8 rounded-full object-cover border border-[var(--border)]"
-                                    />
-                                ) : (
-                                    <div className="w-8 h-8 bg-gradient-to-br from-[#6A11CB] to-[#2575FC] rounded-full flex items-center justify-center text-white font-semibold text-sm">
-                                        {userInitial}
-                                    </div>
-                                )}
-                                <span className="hidden sm:block font-medium">{user?.firstName || 'Пользователь'}</span>
-                                <ChevronDown size={16} className="hidden sm:block text-[var(--foreground-muted)]" />
+                                <div className="w-8 h-8 bg-gradient-to-br from-[#6A11CB] to-[#2575FC] rounded-full flex items-center justify-center text-white text-sm font-semibold">
+                                    {userInitial}
+                                </div>
+                                <ChevronDown size={16} className={`text-[var(--foreground-muted)] transition-transform ${userMenuOpen ? 'rotate-180' : ''}`} />
                             </button>
 
                             {userMenuOpen && (
@@ -260,47 +243,22 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                                         className="fixed inset-0 z-40"
                                         onClick={() => setUserMenuOpen(false)}
                                     />
-                                    <div className="absolute right-0 top-full mt-2 w-56 bg-[var(--card-bg)] border border-[var(--border)] rounded-xl shadow-lg z-50 py-2 animate-fadeIn">
-                                        <div className="px-4 py-2 border-b border-[var(--border)]">
-                                            <p className="font-medium">{user?.firstName || 'Пользователь'}</p>
-                                            <p className="text-sm text-[var(--foreground-muted)]">{user?.email}</p>
-                                            {user?.role === 'ADMIN' && (
-                                                <span className="text-xs text-[var(--warning)] font-medium">Администратор</span>
-                                            )}
+                                    <div className="absolute right-0 top-full mt-2 w-48 bg-[var(--card-bg)] border border-[var(--border)] rounded-xl shadow-lg z-50 animate-fadeIn">
+                                        <div className="p-3 border-b border-[var(--border)]">
+                                            <p className="font-medium">{user?.firstName}</p>
+                                            <p className="text-xs text-[var(--foreground-muted)] truncate">{user?.email}</p>
                                         </div>
-                                        <Link
-                                            href="/dashboard/settings"
-                                            className="flex items-center gap-3 px-4 py-2 hover:bg-[var(--border)] transition-colors"
-                                            onClick={() => setUserMenuOpen(false)}
-                                        >
-                                            <User size={18} />
-                                            <span>Профиль</span>
-                                        </Link>
-                                        <Link
-                                            href="/dashboard/settings"
-                                            className="flex items-center gap-3 px-4 py-2 hover:bg-[var(--border)] transition-colors"
-                                            onClick={() => setUserMenuOpen(false)}
-                                        >
-                                            <Settings size={18} />
-                                            <span>Настройки</span>
-                                        </Link>
-                                        {user?.role === 'ADMIN' && (
-                                            <Link
-                                                href="/admin"
-                                                className="flex items-center gap-3 px-4 py-2 hover:bg-[var(--border)] transition-colors text-[var(--warning)]"
-                                                onClick={() => setUserMenuOpen(false)}
-                                            >
-                                                <Shield size={18} />
-                                                <span>Админ-панель</span>
+                                        <div className="p-1">
+                                            <Link href="/dashboard/settings" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-[var(--background)] rounded-lg" onClick={() => setUserMenuOpen(false)}>
+                                                <Settings size={16} />
+                                                Настройки
                                             </Link>
-                                        )}
-                                        <div className="border-t border-[var(--border)] mt-2 pt-2">
                                             <button
                                                 onClick={handleLogout}
-                                                className="flex items-center gap-3 px-4 py-2 text-[var(--error)] hover:bg-[var(--error)]/10 w-full transition-colors"
+                                                className="flex items-center gap-2 px-3 py-2 text-sm text-[var(--error)] hover:bg-[var(--error)]/5 rounded-lg w-full text-left"
                                             >
-                                                <LogOut size={18} />
-                                                <span>Выйти</span>
+                                                <LogOut size={16} />
+                                                Выйти
                                             </button>
                                         </div>
                                     </div>
@@ -311,11 +269,10 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                 </header>
 
                 {/* Page Content */}
-                <main className="flex-1 p-4 lg:p-6 overflow-auto">
+                <main className="flex-1 p-4 lg:p-8 overflow-auto">
                     {children}
                 </main>
             </div>
-            <SupportBot />
         </div>
     );
 }

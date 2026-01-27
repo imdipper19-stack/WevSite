@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { getCurrentUser } from '@/lib/auth';
 import { findUserById } from '@/lib/db-helpers';
+import { db } from '@/lib/db';
+import { OrderStatus } from '@prisma/client';
 
 export const dynamic = 'force-dynamic';
 
@@ -24,7 +26,27 @@ export async function GET() {
             );
         }
 
-        return NextResponse.json({ user });
+        // Calculate stats
+        const stats = await db.order.aggregate({
+            where: {
+                buyerId: user.id,
+                status: OrderStatus.COMPLETED
+            },
+            _sum: {
+                totalPrice: true
+            },
+            _count: {
+                _all: true
+            }
+        });
+
+        return NextResponse.json({
+            user: {
+                ...user,
+                totalSpent: stats._sum.totalPrice?.toNumber() || 0,
+                completedOrders: stats._count._all || 0
+            }
+        });
     } catch (error) {
         console.error('Get user error:', error);
         return NextResponse.json(
