@@ -225,15 +225,22 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                     <div className="flex items-center gap-4 ml-auto">
                         <NotificationsPopover />
 
-                        {/* User Menu */}
                         <div className="relative">
                             <button
                                 onClick={() => setUserMenuOpen(!userMenuOpen)}
                                 className="flex items-center gap-2 hover:bg-[var(--background)] p-1.5 rounded-lg transition-colors"
                             >
-                                <div className="w-8 h-8 bg-gradient-to-br from-[#6A11CB] to-[#2575FC] rounded-full flex items-center justify-center text-white text-sm font-semibold">
-                                    {userInitial}
-                                </div>
+                                {user?.avatarUrl ? (
+                                    <img
+                                        src={user.avatarUrl}
+                                        alt="Avatar"
+                                        className="w-8 h-8 rounded-full object-cover border border-[var(--border)]"
+                                    />
+                                ) : (
+                                    <div className="w-8 h-8 bg-gradient-to-br from-[#6A11CB] to-[#2575FC] rounded-full flex items-center justify-center text-white text-sm font-semibold">
+                                        {userInitial}
+                                    </div>
+                                )}
                                 <ChevronDown size={16} className={`text-[var(--foreground-muted)] transition-transform ${userMenuOpen ? 'rotate-180' : ''}`} />
                             </button>
 
