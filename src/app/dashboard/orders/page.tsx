@@ -23,6 +23,8 @@ interface Order {
     status: string;
     createdAt: string;
     completedAt?: string;
+    productType?: 'TIKTOK_COINS' | 'TELEGRAM_STARS';
+    telegramUsername?: string;
 }
 
 const statusConfig: Record<string, { icon: typeof CheckCircle; color: string; bgColor: string; text: string }> = {
@@ -154,7 +156,7 @@ export default function OrdersPage() {
                                                     </span>
                                                 </div>
                                                 <p className="text-[var(--foreground-muted)]">
-                                                    {order.coinsAmount.toLocaleString()} монет • {order.totalPrice.toLocaleString()}₽
+                                                    {order.coinsAmount.toLocaleString()} {order.productType === 'TELEGRAM_STARS' ? 'звёзд' : 'монет'} • {order.totalPrice.toLocaleString()}₽
                                                 </p>
                                                 <p className="text-sm text-[var(--foreground-muted)]">
                                                     {formatDate(order.createdAt)}

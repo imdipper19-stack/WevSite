@@ -103,21 +103,67 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: 'Order not found' }, { status: 404 });
         }
 
-        console.log(`Processing Order: ${order.id} (Status: ${order.status})`);
+        console.log(`Processing Order: ${order.id} (Status: ${order.status}, Type: ${order.productType})`);
 
         // Update Status
         if (body.status === 'CONFIRMED') {
-            if (order.status !== OrderStatus.COMPLETED) {
-                await db.order.update({
-                    where: { id: order.id },
-                    data: {
-                        status: OrderStatus.COMPLETED,
-                        completedAt: new Date(),
+            if (order.status !== OrderStatus.COMPLETED && order.status !== OrderStatus.PAID) {
+
+                // Handle different product types
+                if (order.productType === 'TELEGRAM_STARS') {
+                    // Update to PAID to acknowledge payment
+                    await db.order.update({
+                        where: { id: order.id },
+                        data: {
+                            status: OrderStatus.PAID,
+                            paidAt: new Date()
+                        }
+                    });
+
+                    // Trigger delivery (async)
+                    if (order.telegramUsername) {
+                        // Import dynamically to avoid circle if any? No, straightforward import.
+                        // We need to import fragmentService at the top.
+                        // For now using require or assume import at top.
+                        // Actually, I'll add imports in a separate edit or use `import { fragmentService } from '@/lib/services/fragment';` if allowed.
+                        // Since I can't add imports easily with replace_content in middle, I'll use require if possible, OR I will update the whole file. 
+                        // I'll assume imports are added or available.
+                        // I will update the imports in a separate check.
+
+                        // Fire and forget, or handle? 
+                        // It's safer to just log.
+                        console.log('Triggering Fragment delivery...');
+                        const { fragmentService } = require('@/lib/services/fragment');
+                        fragmentService.deliverStars(order.id, order.telegramUsername, order.coinsAmount)
+                            .then((res: any) => console.log('Delivery result:', res))
+                            .catch((err: any) => console.error('Delivery trigger error:', err));
+                    } else {
+                        console.error('No telegram username for Stars order!', order.id);
                     }
-                });
-                console.log('Order marked as COMPLETED');
+
+                } else {
+                    // TIKTOK COINS (Default)
+                    // Transaction: Update Order -> Add Coins to User
+                    await db.$transaction([
+                        db.order.update({
+                            where: { id: order.id },
+                            data: {
+                                status: OrderStatus.COMPLETED,
+                                completedAt: new Date(),
+                                paidAt: new Date()
+                            }
+                        }),
+                        db.user.update({
+                            where: { id: order.buyerId },
+                            data: {
+                                coins: { increment: order.coinsAmount }
+                            }
+                        })
+                    ]);
+                    console.log(`Order ${order.id} completed. Coins added to user.`);
+                }
             } else {
-                console.log('Order already COMPLETED');
+                console.log('Order already COMPLETED or PAID');
             }
         } else if (body.status === 'CANCELED') {
             if (order.status !== OrderStatus.CANCELLED && order.status !== OrderStatus.COMPLETED) {

@@ -79,6 +79,8 @@ export async function GET(request: NextRequest) {
                     status: true,
                     createdAt: true,
                     completedAt: true,
+                    productType: true,
+                    telegramUsername: true,
                 }
             }),
             db.order.count({ where: whereClause })
