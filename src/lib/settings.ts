@@ -33,8 +33,8 @@ export async function getSettings(): Promise<AppSettings> {
             tonExchangeRate: Number(settingsMap['ton_exchange_rate']) || DEFAULTS.tonExchangeRate,
             starsPriceRub: Number(settingsMap['stars_price_rub']) || DEFAULTS.starsPriceRub,
             tiktokCoinPriceRub: Number(settingsMap['tiktok_coin_price_rub']) || DEFAULTS.tiktokCoinPriceRub,
-            tonWalletAddress: settingsMap['ton_wallet_address'] || DEFAULTS.tonWalletAddress,
-            tonWalletMnemonic: settingsMap['ton_wallet_mnemonic'] || DEFAULTS.tonWalletMnemonic,
+            tonWalletAddress: process.env.TON_WALLET_ADDRESS || settingsMap['ton_wallet_address'] || DEFAULTS.tonWalletAddress,
+            tonWalletMnemonic: process.env.TON_WALLET_MNEMONIC || settingsMap['ton_wallet_mnemonic'] || DEFAULTS.tonWalletMnemonic,
             fragmentHash: settingsMap['fragment_hash'] || DEFAULTS.fragmentHash,
             fragmentCookie: settingsMap['fragment_cookie'] || DEFAULTS.fragmentCookie,
         };
