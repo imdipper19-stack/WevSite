@@ -56,7 +56,8 @@ export async function verifyTonTransaction(
         const tonApiKey = "AGAI6AUZN5C7RPQAAAAOSX3E3HQ4ZAJV635FYAV4KBS4QDWZCBXWX6D4RDGY52QPXHLGWZQ"; // TODO: Move to env
 
         const res = await fetch(`https://tonapi.io/v2/blockchain/accounts/${walletAddress}/transactions?limit=20`, {
-            headers: { 'Authorization': `Bearer ${tonApiKey}` }
+            headers: { 'Authorization': `Bearer ${tonApiKey}` },
+            cache: 'no-store'
         });
 
         if (!res.ok) return false;
@@ -274,7 +275,8 @@ export class FragmentService {
 
             // Get Status first to determine if we need to deploy
             const accountRes = await fetch(`https://tonapi.io/v2/accounts/${walletAddress.toString()}`, {
-                headers: { 'Authorization': `Bearer ${tonApiKey}` }
+                headers: { 'Authorization': `Bearer ${tonApiKey}` },
+                cache: 'no-store'
             });
             const accountData: any = await accountRes.json();
             const status = accountData.status;
@@ -284,7 +286,8 @@ export class FragmentService {
             if (status === 'active') {
                 try {
                     const seqnoRes = await fetch(`https://tonapi.io/v2/blockchain/accounts/${walletAddress.toString()}/methods/seqno`, {
-                        headers: { 'Authorization': `Bearer ${tonApiKey}` }
+                        headers: { 'Authorization': `Bearer ${tonApiKey}` },
+                        cache: 'no-store'
                     });
 
                     if (seqnoRes.ok) {
@@ -369,7 +372,8 @@ export class FragmentService {
                     'Authorization': `Bearer ${tonApiKey}`,
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ boc: finalBoc })
+                body: JSON.stringify({ boc: finalBoc }),
+                cache: 'no-store'
             });
 
             if (!broadcastRes.ok) {
