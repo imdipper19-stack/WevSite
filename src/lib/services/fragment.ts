@@ -290,20 +290,14 @@ export class FragmentService {
                     if (seqnoRes.ok) {
                         const seqnoData: any = await seqnoRes.json();
 
-                        // Inspect decoding
                         if (seqnoData.decoded && seqnoData.decoded.seqno !== undefined) {
                             seqno = Number(seqnoData.decoded.seqno);
-                        } else if (seqnoData.decoded && typeof seqnoData.decoded === 'object' && Object.values(seqnoData.decoded).length > 0) {
-                            seqno = Number(Object.values(seqnoData.decoded)[0]);
-                        } else if (seqnoData.stack) {
-                            const num = seqnoData.stack.find((i: any) => i.type === 'num');
-                            if (num) {
-                                seqno = Number(num.value);
-                            } else {
-                                if (Array.isArray(seqnoData.stack) && seqnoData.stack.length > 0 && typeof seqnoData.stack[0] === 'string') {
-                                    seqno = parseInt(seqnoData.stack[0], 16);
-                                }
-                            }
+                        } else if (seqnoData.stack && seqnoData.stack.length > 0) {
+                            // Handle various stack formats (sometimes [type, value], sometimes objects)
+                            const item = seqnoData.stack[0];
+                            if (item && item.value) seqno = Number(item.value);
+                            else if (Array.isArray(item) && item[1]) seqno = parseInt(item[1], 16) || Number(item[1]);
+                            else seqno = 0;
                         }
                     } else {
                         seqno = accountData.seqno || 0;
