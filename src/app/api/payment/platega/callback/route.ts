@@ -36,12 +36,15 @@ export async function POST(request: NextRequest) {
         if (!orderId) {
             // Try to parse from payload if we sent it there
             try {
-                // The docs example had `payload: "custom-payload"`. 
-                // Using payload if externalId is missing.
+                // If payload is a string (JSON), parse it. If object, use as is.
+                console.log('Parsing payload for orderId:', body.payload);
                 const p = typeof body.payload === 'string' ? JSON.parse(body.payload) : body.payload;
-                if (p && p.orderId) orderId = p.orderId;
+
+                if (p && p.orderId) {
+                    orderId = p.orderId;
+                }
             } catch (e) {
-                // ignore
+                console.error('Failed to parse payload:', e);
             }
         }
 
