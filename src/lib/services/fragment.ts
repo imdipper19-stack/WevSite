@@ -113,7 +113,7 @@ export class FragmentService {
             headers: getHeaders(config.cookie),
             body: params
         });
-        require('fs').appendFileSync('debug.log', `[${new Date().toISOString()}] Search fetch status: ${res.status}\n`);
+        console.log(`[${new Date().toISOString()}] Search fetch status: ${res.status}`);
 
         if (!res.ok) {
             console.error(`Fragment Search Error ${res.status}`);
@@ -143,7 +143,7 @@ export class FragmentService {
         });
 
         const data = await res.json();
-        require('fs').appendFileSync('debug.log', `[${new Date().toISOString()}] Init response: ${JSON.stringify(data)}\n`);
+        console.log(`[${new Date().toISOString()}] Init response: ${JSON.stringify(data)}`);
 
         // Fragment API doesn't always return ok:true on success for this method
         if (!data.req_id) return null;
@@ -394,14 +394,14 @@ export class FragmentService {
                 console.error(`FAILED to update order ${orderId} status:`, dbError);
                 // We still returned success true because money was sent.
                 // Log heavily.
-                require('fs').appendFileSync('debug.log', `[${new Date().toISOString()}] CRITICAL: Failed to update DB for order ${orderId}: ${dbError.message}\n`);
+                console.error(`[${new Date().toISOString()}] CRITICAL: Failed to update DB for order ${orderId}: ${dbError.message}`);
             }
 
             return { success: true, txHash: 'broadcasted' };
 
         } catch (error: any) {
             console.error('Stars Delivery Error:', error);
-            require('fs').appendFileSync('debug.log', `[${new Date().toISOString()}] Stars Delivery Error for order ${orderId}: ${error.message}\n${error.stack}\n`);
+            console.error(`[${new Date().toISOString()}] Stars Delivery Error for order ${orderId}: ${error.message}`);
 
             // If an error occurs during processing, mark the order as PROCESSING
             // so it can be retried or manually reviewed.
@@ -413,7 +413,7 @@ export class FragmentService {
                 console.log(`Order ${orderId} marked as PROCESSING due to error.`);
             } catch (dbError: any) {
                 console.error(`FAILED to update order ${orderId} status to PROCESSING after error:`, dbError);
-                require('fs').appendFileSync('debug.log', `[${new Date().toISOString()}] CRITICAL: Failed to update DB for order ${orderId} to PROCESSING: ${dbError.message}\n`);
+                console.error(`[${new Date().toISOString()}] CRITICAL: Failed to update DB for order ${orderId} to PROCESSING: ${dbError.message}`);
             }
             return { success: false, error: error.message };
         }
