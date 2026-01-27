@@ -10,121 +10,114 @@ export async function POST(request: NextRequest) {
         const secretHeader = request.headers.get('X-Secret') || '';
         const body: CallbackPayload = await request.json();
 
-        console.log('Platega Callback received:', JSON.stringify(body));
+        console.log('--- Platega Callback Start ---');
+        console.log('Body:', JSON.stringify(body, null, 2));
 
-        // Verify signature (optional based on user request but good practice)
+        // Verify signature
         if (!PlategaClient.verifyCallback(body, secretHeader)) {
-            console.warn('Platega callback signature verification failed');
-            // If user said secret is not needed, we might allow it?
-            // But PlategaClient logic returns true if no secret set.
-            // If secret IS set, we must verify.
-            return NextResponse.json({ error: 'Invalid signature' }, { status: 403 });
-        }
-
-        // Check if order exists
-        // Platega sends our orderId as `externalId` (if we passed it) or we can match by something else.
-        // But the docs for callback payload show `externalId`.
-        // Let's assume we passed it.
-        // If not, we might need to parse `description` or something.
-
-        let orderId = body.externalId;
-
-        // Fallback: try to find orderId in description "Description #<orderId>"? 
-        // Or if we didn't pass externalId? 
-        // My createRoute PASSED externalId: order.id. So it should be there.
-
-        if (!orderId) {
-            // Try to parse from payload if we sent it there
-            try {
-                // If payload is a string (JSON), parse it. If object, use as is.
-                console.log('Parsing payload for orderId:', body.payload);
-                const p = typeof body.payload === 'string' ? JSON.parse(body.payload) : body.payload;
-
-                if (p && p.orderId) {
-                    orderId = p.orderId;
-                }
-            } catch (e) {
-                console.error('Failed to parse payload:', e);
+            console.warn(`Signature verification failed. secretHeader: ${secretHeader ? '***' : 'null'}`);
+            // Force 403 unless secret is misconfigured/empty
+            if (process.env.PLATEGA_API_KEY) {
+                return NextResponse.json({ error: 'Invalid signature' }, { status: 403 });
             }
         }
 
-        if (!orderId) {
-            // Try to parse from payload if we sent it there
-            try {
-                // If payload is a string (JSON), parse it. If object, use as is.
-                console.log('Parsing payload for orderId:', body.payload);
-                const p = typeof body.payload === 'string' ? JSON.parse(body.payload) : body.payload;
+        // Strategy 1: External ID
+        let orderId = body.externalId;
+        if (orderId) console.log(`Strategy 1 (ExternalID): Found ${orderId}`);
 
+        // Strategy 2: Payload (JSON)
+        if (!orderId && body.payload) {
+            try {
+                const p = typeof body.payload === 'string' ? JSON.parse(body.payload) : body.payload;
                 if (p && p.orderId) {
                     orderId = p.orderId;
+                    console.log(`Strategy 2 (Payload): Found ${orderId}`);
                 }
             } catch (e) {
-                console.error('Failed to parse payload:', e);
+                console.error('Strategy 2 Error parsing payload:', e);
             }
         }
 
         let order;
 
+        // Try Lookup by ID
         if (orderId) {
-            order = await db.order.findUnique({
-                where: { id: orderId }
-            });
+            order = await db.order.findUnique({ where: { id: orderId } });
+            if (!order) console.log(`Lookup by ID ${orderId} returned null`);
         }
 
-        // Fallback: Try to find by Order Number from description if ID not found
-        // Description format: "Оплата заказа #VID-XXXX-XXXX (Vidlecta)" or similar
+        // Strategy 3: Description Regex (Fallback)
         if (!order && body.description) {
-            console.log('Trying to find order by description:', body.description);
-            // Match #VID-XXXX...
-            const match = body.description.match(/#(VID-[A-Z0-9-]+)/);
+            console.log(`Strategy 3 (Description): Analyzing "${body.description}"`);
+            // Regex to find #VID-...
+            // Matches #VID- until space or end of string
+            const match = body.description.match(/#(VID-[A-Z0-9-]+)/i);
             if (match && match[1]) {
-                const orderNumber = match[1];
-                console.log('Found orderNumber in description:', orderNumber);
-                order = await db.order.findUnique({
-                    where: { orderNumber: orderNumber }
+                const orderNumber = match[1].toUpperCase(); // Ensure uppercase
+                console.log(`Strategy 3: Extracted OrderNumber ${orderNumber}`);
+
+                order = await db.order.findFirst({
+                    where: {
+                        orderNumber: {
+                            equals: orderNumber,
+                            mode: 'insensitive' // key to avoiding case issues
+                        }
+                    }
                 });
+
                 if (order) {
-                    orderId = order.id; // Ensure orderId is set for status update log
+                    console.log(`Strategy 3: Found Order via OrderNumber! ID: ${order.id}`);
+                    orderId = order.id;
+                } else {
+                    console.log(`Strategy 3: DB lookup for OrderNumber ${orderNumber} returned null`);
+                    // Debug: list recent orders to see format?
+                    // Too expensive/risky for prod.
                 }
+            } else {
+                console.log('Strategy 3: No regex match in description');
             }
         }
 
         if (!order) {
-            console.error(`Platega callback: Order not found. ID: ${orderId}, Desc: ${body.description}`);
+            console.error('!!!!!! ORDER NOT FOUND !!!!!!');
+            console.error('Search attempts failed.');
             return NextResponse.json({ error: 'Order not found' }, { status: 404 });
         }
 
-        // Check status
+        console.log(`Processing Order: ${order.id} (Status: ${order.status})`);
+
+        // Update Status
         if (body.status === 'CONFIRMED') {
-            // Update order status
             if (order.status !== OrderStatus.COMPLETED) {
                 await db.order.update({
-                    where: { id: orderId },
+                    where: { id: order.id },
                     data: {
                         status: OrderStatus.COMPLETED,
                         completedAt: new Date(),
-                        // Maybe save transaction ID?
                     }
                 });
-                console.log(`Order ${orderId} completed via Platega`);
+                console.log('Order marked as COMPLETED');
+            } else {
+                console.log('Order already COMPLETED');
             }
         } else if (body.status === 'CANCELED') {
             if (order.status !== OrderStatus.CANCELLED && order.status !== OrderStatus.COMPLETED) {
                 await db.order.update({
-                    where: { id: orderId },
-                    data: {
-                        status: OrderStatus.CANCELLED
-                    }
+                    where: { id: order.id },
+                    data: { status: OrderStatus.CANCELLED }
                 });
+                console.log('Order marked as CANCELLED');
             }
         }
 
+        console.log('--- Callback Processed Successfully ---');
         return NextResponse.json({ success: true });
 
     } catch (error: any) {
-        console.error('Platega callback error:', error);
+        console.error('Platega callback CRITICAL error:', error);
         return NextResponse.json(
-            { error: 'Callback processing failed' },
+            { error: 'Callback processing failed', details: error.message },
             { status: 500 }
         );
     }
