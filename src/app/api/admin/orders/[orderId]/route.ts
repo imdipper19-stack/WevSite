@@ -25,13 +25,16 @@ export async function PATCH(
         }
 
         const body = await req.json();
-        const { status } = body;
+        const { status, executorId } = body;
 
-        if (!status || !Object.values(OrderStatus).includes(status)) {
+        // Status validation
+        if (status && !Object.values(OrderStatus).includes(status)) {
             return NextResponse.json({ error: 'Invalid status' }, { status: 400 });
         }
 
-        const dataToUpdate: any = { status };
+        const dataToUpdate: any = {};
+        if (status) dataToUpdate.status = status;
+        if (executorId !== undefined) dataToUpdate.executorId = executorId; // Allow null to unassign
 
         // If completing, set completedAt
         if (status === OrderStatus.COMPLETED) {

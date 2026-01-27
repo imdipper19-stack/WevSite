@@ -42,9 +42,15 @@ export async function GET(request: NextRequest) {
             // Actually, `getOrdersByUser` in db-helpers is simple. I can rewrite logic here.
         }
 
-        let whereClause: any = {
-            buyerId: currentUser.userId,
-        };
+        let whereClause: any = {};
+
+        if (currentUser.role === 'EXECUTOR') {
+            // Executors see assigned orders
+            whereClause.executorId = currentUser.userId;
+        } else {
+            // Buyers see their own orders
+            whereClause.buyerId = currentUser.userId;
+        }
 
         if (statusParam && statusParam !== 'all') {
             if (statusParam === 'active') {

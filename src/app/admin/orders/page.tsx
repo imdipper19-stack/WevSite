@@ -247,9 +247,11 @@ export default function AdminOrdersPage() {
                                             </td>
                                             <td className="p-4">
                                                 <div className="flex items-center gap-1">
-                                                    <Button variant="ghost" size="icon">
-                                                        <Eye size={16} />
-                                                    </Button>
+                                                    <Link href={`/admin/orders/${order.id}`}>
+                                                        <Button variant="ghost" size="icon">
+                                                            <Eye size={16} />
+                                                        </Button>
+                                                    </Link>
                                                     <Link href={`/admin/orders/${order.id}/chat`}>
                                                         <Button variant="ghost" size="icon" title="Чат с покупателем">
                                                             <MessageCircle size={16} className="text-[var(--primary)]" />

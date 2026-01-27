@@ -35,6 +35,7 @@ const navigation = [
     { name: 'Контент', href: '/admin/content', icon: FileText },
     { name: 'Поддержка', href: '/admin/support', icon: MessageSquare },
     { name: 'Настройки', href: '/admin/settings', icon: Settings },
+    { name: 'Уведомления', href: '/admin/notifications', icon: Bell },
 ];
 
 export default function AdminLayout({ children }: AdminLayoutProps) {

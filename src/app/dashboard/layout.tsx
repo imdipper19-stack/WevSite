@@ -167,6 +167,16 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                                 <span className="font-medium">Админ-панель</span>
                             </Link>
                         )}
+                        {user?.role === 'EXECUTOR' && (
+                            <Link
+                                href="/dashboard/executor"
+                                className="flex items-center gap-3 px-3 py-2.5 rounded-lg mb-1 transition-colors text-[var(--primary)] hover:bg-[var(--primary)]/10"
+                                onClick={() => setSidebarOpen(false)}
+                            >
+                                <Shield size={20} />
+                                <span className="font-medium">Панель Исполнителя</span>
+                            </Link>
+                        )}
                     </nav>
 
                     {/* User Menu */}
