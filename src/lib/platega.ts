@@ -1,9 +1,9 @@
 import crypto from 'crypto';
 
-const API_URL = process.env.PLATEGA_API_URL || 'https://app.platega.io/api';
+const API_URL = process.env.PLATEGA_API_URL || 'https://app.platega.io'; // Removed /api
 const MERCHANT_ID = process.env.PLATEGA_MERCHANT_ID;
 const API_KEY = process.env.PLATEGA_API_KEY;
-const SECRET_KEY = process.env.PLATEGA_SECRET_KEY;
+const SECRET_KEY = process.env.PLATEGA_SECRET_KEY; // Only for callback verification if distinct
 
 if (!MERCHANT_ID || !API_KEY) {
     console.warn('Platega credentials (MERCHANT_ID or API_KEY) are missing in environment variables.');
@@ -44,12 +44,11 @@ export interface CallbackPayload {
 
 export class PlategaClient {
     private static getHeaders() {
-        // Optimistically trying Authorization: Bearer and X-Merchant-Id
-        // If this fails, we might need to try X-Api-Key or similar.
+        // Corrected based on testing: X-MerchantId (no dash), X-Secret (API Key)
         return {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${API_KEY}`,
-            'X-Merchant-Id': MERCHANT_ID || '',
+            'X-MerchantId': MERCHANT_ID || '',
+            'X-Secret': API_KEY || '',
         };
     }
 
