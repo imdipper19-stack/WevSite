@@ -1,7 +1,12 @@
 
-import { TonClient, WalletContractV4, internal, external, beginCell, storeMessage } from "ton";
-import { mnemonicToWalletKey, sign } from "ton-crypto";
-import fetch from 'node-fetch'; // Might need to use globalThis.fetch in Node 18+
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+
+const { TonClient, WalletContractV4, internal, external, beginCell, storeMessage } = require("ton");
+const { mnemonicToWalletKey, sign } = require("ton-crypto");
+
+// Node 18+ has native fetch
+const myFetch = globalThis.fetch;
 
 // =================CONFIG=================
 const USERNAME = '@BAG1BAG1';
@@ -14,9 +19,6 @@ const TON_API_KEY = "AGAI6AUZN5C7RPQAAAAOSX3E3HQ4ZAJV635FYAV4KBS4QDWZCBXWX6D4RDG
 
 const FRAGMENT_URL = 'https://fragment.com/api';
 const FRAGMENT_STARS_ADDRESS = 'UQCFJEP4WZ_mpdo0_kMEmsTgvrMHG7K_tWY16pQhKHwoOtFz';
-
-// Polyfill fetch for older Node if needed, though Node 18+ has it.
-const myFetch = globalThis.fetch || fetch;
 
 const cleanUsername = (u) => u.replace(/^@/, '');
 
