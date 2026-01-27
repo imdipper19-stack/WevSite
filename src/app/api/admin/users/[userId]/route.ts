@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
-import { getCurrentUser } from '@/lib/auth';
+import { getCurrentUser, hashPassword } from '@/lib/auth';
 import { UserRole } from '@prisma/client';
 
 export const dynamic = 'force-dynamic';
@@ -26,7 +26,7 @@ export async function PATCH(
         }
 
         const body = await req.json();
-        const { firstName, lastName, email, role, isBanned } = body;
+        const { firstName, lastName, email, role, isBanned, password } = body;
 
         // Prevent admin from banning themselves
         if (params.userId === session.userId && isBanned === true) {
@@ -39,15 +39,11 @@ export async function PATCH(
         if (email !== undefined) dataToUpdate.email = email;
         if (role !== undefined) dataToUpdate.role = role;
 
-        // Handle ban status (we might not have an isBanned field, usually it's a status enum or boolean)
-        // Let's check schema. If no 'isBanned', we might use 'status' field or add one.
-        // Looking at previous files, UI used 'status': 'active' | 'banned'. 
-        // Prisma schema defines User? I should check schema. 
-        // Assuming we need to add 'isBanned' or 'status' to User if not exists.
-        // For now, let's assume 'isBanned' exists or we use a workaround.
-        // In previous steps, I didn't see 'isBanned' in schema view, but I might have missed it.
-        // Let's rely on standard practice or check schema.
-        // I'll assume 'isBanned' boolean for now as it's common.
+        if (password && password.trim().length > 0) {
+            dataToUpdate.passwordHash = await hashPassword(password);
+        }
+
+        // Handle ban status
         if (isBanned !== undefined) dataToUpdate.isBanned = isBanned;
 
         const updatedUser = await db.user.update({

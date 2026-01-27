@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { getCurrentUser } from '@/lib/auth';
-import { UserRole } from '@prisma/client';
+import { UserRole, OrderStatus } from '@prisma/client';
 
 export const dynamic = 'force-dynamic';
 
@@ -43,6 +43,10 @@ export async function GET(req: NextRequest) {
                 include: {
                     _count: {
                         select: { orders: true }
+                    },
+                    orders: {
+                        where: { status: OrderStatus.COMPLETED },
+                        select: { totalPrice: true }
                     }
                 }
             }),
@@ -58,7 +62,8 @@ export async function GET(req: NextRequest) {
                 role: u.role.toLowerCase(),
                 balance: u.balance,
                 ordersCount: u._count.orders,
-                status: 'active', // Placeholder, verify schema if status field exists
+                totalSpent: u.orders.reduce((sum, o) => sum + Number(o.totalPrice), 0),
+                status: u.isBanned ? 'banned' : 'active',
                 createdAt: u.createdAt.toISOString()
             })),
             pagination: {

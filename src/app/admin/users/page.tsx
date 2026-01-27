@@ -26,6 +26,7 @@ interface User {
     ordersCount: number;
     status: string;
     createdAt: string;
+    totalSpent: number;
 }
 
 const roleLabels: Record<string, { label: string; color: string }> = {
@@ -45,6 +46,11 @@ export default function AdminUsersPage() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedUsers, setSelectedUsers] = useState<string[]>([]);
     const [roleFilter, setRoleFilter] = useState('all');
+
+    // Edit Modal State
+    const [editingUser, setEditingUser] = useState<User | null>(null);
+    const [editForm, setEditForm] = useState({ firstName: '', lastName: '', email: '', password: '' });
+    const [saving, setSaving] = useState(false);
 
     // Pagination
     const [page, setPage] = useState(1);
@@ -107,8 +113,6 @@ export default function AdminUsersPage() {
             const res = await fetch(`/api/admin/users/${userId}`, {
                 method: 'PATCH',
                 headers: { 'Content-Type': 'application/json' },
-                // Backend expects uppercase generic role or specific enum. 
-                // Route just passes it. Prisma needs UpperCase.
                 body: JSON.stringify({ role: newRole.toUpperCase() })
             });
 
@@ -120,6 +124,45 @@ export default function AdminUsersPage() {
         } catch (error) {
             console.error(error);
             fetchUsers();
+        }
+    };
+
+    const openEditModal = (user: User) => {
+        const [first, ...rest] = user.name.split(' ');
+        setEditingUser(user);
+        setEditForm({
+            firstName: first || '',
+            lastName: rest.join(' ') || '', // Approximation
+            email: user.email || '',
+            password: ''
+        });
+    };
+
+    const handleSaveUser = async () => {
+        if (!editingUser) return;
+        setSaving(true);
+        try {
+            const res = await fetch(`/api/admin/users/${editingUser.id}`, {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    firstName: editForm.firstName,
+                    lastName: editForm.lastName,
+                    email: editForm.email,
+                    password: editForm.password || undefined
+                })
+            });
+
+            if (res.ok) {
+                setEditingUser(null);
+                fetchUsers();
+            } else {
+                alert('Ошибка сохранения');
+            }
+        } catch (e) {
+            console.error(e);
+        } finally {
+            setSaving(false);
         }
     };
 
@@ -211,6 +254,7 @@ export default function AdminUsersPage() {
                                 <th className="text-left p-4 text-sm font-medium text-[var(--foreground-muted)]">Пользователь</th>
                                 <th className="text-left p-4 text-sm font-medium text-[var(--foreground-muted)]">Роль</th>
                                 <th className="text-left p-4 text-sm font-medium text-[var(--foreground-muted)]">Баланс</th>
+                                <th className="text-left p-4 text-sm font-medium text-[var(--foreground-muted)]">Всего купил</th>
                                 <th className="text-left p-4 text-sm font-medium text-[var(--foreground-muted)]">Заказов</th>
                                 <th className="text-left p-4 text-sm font-medium text-[var(--foreground-muted)]">Дата рег.</th>
                                 <th className="p-4"></th>
@@ -263,13 +307,14 @@ export default function AdminUsersPage() {
                                             </select>
                                         </td>
                                         <td className="p-4 font-medium">{user.balance.toLocaleString()}₽</td>
+                                        <td className="p-4 font-medium text-[var(--primary)]">{user.totalSpent?.toLocaleString() || 0}₽</td>
                                         <td className="p-4">{user.ordersCount}</td>
                                         <td className="p-4 text-[var(--foreground-muted)] whitespace-nowrap">
                                             {new Date(user.createdAt).toLocaleDateString()}
                                         </td>
                                         <td className="p-4 text-right">
                                             <div className="flex items-center justify-end gap-1">
-                                                <Button variant="ghost" size="icon">
+                                                <Button variant="ghost" size="icon" onClick={() => openEditModal(user)}>
                                                     <Edit2 size={16} />
                                                 </Button>
                                                 {user.status === 'banned' ? (
@@ -327,6 +372,47 @@ export default function AdminUsersPage() {
                     </div>
                 </div>
             </Card>
+
+            {/* Edit Modal */}
+            {editingUser && (
+                <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center animate-fadeIn">
+                    <Card className="w-full max-w-md m-4">
+                        <div className="flex justify-between items-center mb-4">
+                            <h2 className="text-xl font-bold">Редактирование пользователя</h2>
+                            <button onClick={() => setEditingUser(null)}><UserX size={20} /></button>
+                        </div>
+                        <div className="space-y-4">
+                            <div className="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label className="text-xs text-gray-500">Имя</label>
+                                    <Input value={editForm.firstName} onChange={e => setEditForm({ ...editForm, firstName: e.target.value })} />
+                                </div>
+                                <div>
+                                    <label className="text-xs text-gray-500">Фамилия</label>
+                                    <Input value={editForm.lastName} onChange={e => setEditForm({ ...editForm, lastName: e.target.value })} />
+                                </div>
+                            </div>
+                            <div>
+                                <label className="text-xs text-gray-500">Email</label>
+                                <Input value={editForm.email} onChange={e => setEditForm({ ...editForm, email: e.target.value })} />
+                            </div>
+                            <div>
+                                <label className="text-xs text-gray-500">Новый пароль (оставьте пустым чтобы не менять)</label>
+                                <Input
+                                    type="password"
+                                    placeholder="••••••••"
+                                    value={editForm.password}
+                                    onChange={e => setEditForm({ ...editForm, password: e.target.value })}
+                                />
+                            </div>
+                            <div className="flex justify-end gap-2 pt-2">
+                                <Button variant="ghost" onClick={() => setEditingUser(null)}>Отмена</Button>
+                                <Button onClick={handleSaveUser} isLoading={saving}>Сохранить</Button>
+                            </div>
+                        </div>
+                    </Card>
+                </div>
+            )}
         </div>
     );
 }
