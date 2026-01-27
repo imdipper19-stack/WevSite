@@ -256,7 +256,7 @@ export default function AdminOrdersPage() {
                                                         </Button>
                                                     </Link>
 
-                                                    {['PROCESSING', 'PENDING_PAYMENT'].includes(order.status) && (
+                                                    {['PROCESSING', 'PENDING_PAYMENT', 'PAID'].includes(order.status) && (
                                                         <>
                                                             <Button
                                                                 variant="ghost"

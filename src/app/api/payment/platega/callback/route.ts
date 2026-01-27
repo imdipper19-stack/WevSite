@@ -140,25 +140,16 @@ export async function POST(request: NextRequest) {
                     }
 
                 } else {
-                    // TIKTOK COINS (Default)
-                    // Transaction: Update Order -> Add Coins to User
-                    await db.$transaction([
-                        db.order.update({
-                            where: { id: order.id },
-                            data: {
-                                status: OrderStatus.COMPLETED,
-                                completedAt: new Date(),
-                                paidAt: new Date()
-                            }
-                        }),
-                        db.user.update({
-                            where: { id: order.buyerId },
-                            data: {
-                                coins: { increment: order.coinsAmount }
-                            }
-                        })
-                    ]);
-                    console.log(`Order ${order.id} completed. Coins added to user.`);
+                    // TIKTOK COINS (Manual Delivery)
+                    // Just mark as PAID. Executors will complete it manually.
+                    await db.order.update({
+                        where: { id: order.id },
+                        data: {
+                            status: OrderStatus.PAID,
+                            paidAt: new Date()
+                        }
+                    });
+                    console.log(`Order ${order.id} marked as PAID (Waiting for manual delivery).`);
                 }
             } else {
                 console.log('Order already COMPLETED or PAID');
