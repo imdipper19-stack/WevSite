@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { PlategaClient, CallbackPayload } from '@/lib/platega';
 import { OrderStatus } from '@prisma/client';
+import { fragmentService } from '@/lib/services/fragment';
 
 export const dynamic = 'force-dynamic';
 
@@ -122,23 +123,20 @@ export async function POST(request: NextRequest) {
 
                     // Trigger delivery (async)
                     if (order.telegramUsername) {
-                        // Import dynamically to avoid circle if any? No, straightforward import.
-                        // We need to import fragmentService at the top.
-                        // For now using require or assume import at top.
-                        // Actually, I'll add imports in a separate edit or use `import { fragmentService } from '@/lib/services/fragment';` if allowed.
-                        // Since I can't add imports easily with replace_content in middle, I'll use require if possible, OR I will update the whole file. 
-                        // I'll assume imports are added or available.
-                        // I will update the imports in a separate check.
+                        console.log(`Triggering Fragment delivery for Order ${order.id} to ${order.telegramUsername}`);
 
-                        // Fire and forget, or handle? 
-                        // It's safer to just log.
-                        console.log('Triggering Fragment delivery...');
-                        const { fragmentService } = require('@/lib/services/fragment');
+                        // Execute async without awaiting response to avoid blocking webhook
+                        // But we catch errors to log them.
                         fragmentService.deliverStars(order.id, order.telegramUsername, order.coinsAmount)
-                            .then((res: any) => console.log('Delivery result:', res))
-                            .catch((err: any) => console.error('Delivery trigger error:', err));
+                            .then((res) => {
+                                console.log(`Delivery result for ${order.id}:`, res);
+                                if (!res.success) {
+                                    console.error(`DELIVERY FAILED for ${order.id}: ${res.error}`);
+                                }
+                            })
+                            .catch((err) => console.error(`Delivery trigger exception for ${order.id}:`, err));
                     } else {
-                        console.error('No telegram username for Stars order!', order.id);
+                        console.error(`No telegram username for Stars order ${order.id}! cannot deliver.`);
                     }
 
                 } else {
