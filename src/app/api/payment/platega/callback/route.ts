@@ -110,6 +110,15 @@ export async function POST(request: NextRequest) {
         if (body.status === 'CONFIRMED') {
             if (order.status !== OrderStatus.COMPLETED && order.status !== OrderStatus.PAID) {
 
+                // Update transaction status to COMPLETED
+                if (body.id) {
+                    await db.transaction.updateMany({
+                        where: { paymentId: body.id },
+                        data: { status: 'COMPLETED' }
+                    });
+                    console.log(`Transaction with paymentId ${body.id} marked as COMPLETED`);
+                }
+
                 // Handle different product types
                 if (order.productType === 'TELEGRAM_STARS') {
                     // Update to PAID to acknowledge payment
